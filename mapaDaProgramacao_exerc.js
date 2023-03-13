@@ -173,3 +173,79 @@ console.clear();
 
 // console.log("piloto 1 ", maisRapidovelo1);
 // console.log("piloto 2 ", maisRapidovelo2);
+
+
+
+
+
+//-----------------------------------------------------
+// Aula 4 - Operadores Lógicos:
+//-----------------------------------------------------
+
+
+
+
+
+// 1° Desenvolva um sistema para identificar se uma pessoa tem preferência em um embarque. Para isso, o usuário precisará inserir duas informações:
+//  idade e tipo de bilhete. Se a idade for maior do que 60 anos ou tipo de bilhete for “premium”, o usuário poderá passar a frente. Imprima a mensagem:
+//   “Embarque preferencial: [true ou false]”
+
+
+
+// console.log("------- PREFERÊNCIA DE EMBARQUE -------");
+
+// let bilhete = prompt("Informe seu tipo de bilhete (comum/premium): ");
+// let idade = parseInt(prompt("Informe sua idade: "));
+
+
+// let condição = bilhete == "premium" && idade > 60;
+
+// console.log("Embarque preferencial: ",condição);
+
+
+
+// 2° Para uma criança participar das aulas de natação do colégio, ela deve ter menos de 10 anos e estar na série 5. Desenvolva um sistema em que
+//  o usuário insira a idade da criança e também a respectiva série. Em seguida, imprima se poderá ou não participar das aulas de natação.
+
+
+
+// console.log("------- AULA DE NATAÇÃO -------");
+
+// let serie = parseInt(prompt("Informe em qual série está: "));
+// let idade = parseInt(prompt("Informe sua idade: "));
+
+// let condição = serie == "5" && idade < 10;
+
+// console.log("Participar da aula de natação: ",condição);
+
+
+
+// 3° Para se qualificar para o melhor jogador de vôlei do mundo, o candidato deverá ter marcado durante a temporada uma pontuação maior ou 
+// igual a 50 pontos, ter mais de 3 anos de carreira e também ter fornecido pelo menos 30 assistências. Desenvolva um programa que leia o nome, 
+// pontuação, tempo de carreira e numero de assistências. Em seguida, imprima uma mensagem se ele se qualifica ou não para ser candidato a melhor do mundo.
+
+
+
+// console.log("------- MELHOR DO MUNDO -------");
+
+// let nome = prompt("Informe seu nome: ");
+// let tempoCarreira = parseInt(prompt("Informe seu tempo de carreira: "));
+// let pontuacao = parseInt(prompt("Informe a pontuação na temporada: "));
+// let assistencia = parseInt(prompt("Informe quantas assistência concedeu: "));
+
+// let condicao = pontuacao >=50 && tempoCarreira > 3 && assistencia >=30;
+
+// console.log(nome, "qualificado para melhor do mundo: ",condicao);
+
+
+
+// 4° Para um número ser ímpar, o resultado do módulo (%) tem que ser diferente de zero. Desenvolva um programa que identifique se o
+//  número inserido pelo usuário é impar.
+
+// console.log("------- NÚMERO PAR/ÍMPAR -------");
+
+// let number = parseInt(prompt("Informe um númreo: "));
+
+// let resultado = number % 2 == 0;
+
+// console.log("True = par ou false = ímpar: ", resultado);
