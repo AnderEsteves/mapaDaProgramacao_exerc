@@ -117,9 +117,7 @@ console.clear();
 
 
 // console.log("----- Viagem SP > PR - Tempo Estimado ------")
-
 // let velocidade = parseInt(prompt("Informe a velocidade em (km/h): "));
-
 // let tempo = 400/velocidade;
 
 
@@ -131,4 +129,47 @@ console.clear();
 
 
 
+//-----------------------------------------------------
+// Aula 3 - Operadores de Comparação:
+//-----------------------------------------------------
 
+
+
+
+
+
+// 1. Desenvolva um código para identificar se os dois números inseridos são iguais.
+
+
+// let number1 = parseInt(prompt("Informe o 1° número: "));
+// let number2 = parseInt(prompt("Informe o 2° número: "));
+
+// let comparação = number1 == number2;
+
+// console.log("Os numeros inseridos são iguais: ", comparação);
+
+
+
+// 2. Escreva um algoritmo para identificar se o nome inserido pelo usuário é diferente do seu.
+
+
+// let name = prompt("Informe seu nome: ");
+
+// let comparação = name =="anderson";
+
+// console.log("Os nomes são iguais ? ", comparação);
+
+
+
+// 3. Desenvolva um sistema para receber duas velocidades de dois pilotos de fórmula 1. Em seguida, apresente o que teve maior velocidade.
+
+// console.log("------- PILOTO MAIS RÁPIDO -------")
+
+// let velo1 = parseInt(prompt("Informe a velocidade do 1° piloto: "));
+// let velo2 = parseInt(prompt("Informe a velocidade do 2° piloto: "));
+
+// let maisRapidovelo1 = velo1 > velo2;
+// let maisRapidovelo2 = velo1 < velo2;
+
+// console.log("piloto 1 ", maisRapidovelo1);
+// console.log("piloto 2 ", maisRapidovelo2);
