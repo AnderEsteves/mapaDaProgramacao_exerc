@@ -249,3 +249,92 @@ console.clear();
 // let resultado = number % 2 == 0;
 
 // console.log("True = par ou false = ímpar: ", resultado);
+
+
+
+
+
+
+
+//-----------------------------------------------------
+// Aula 5- Estruturas Condicionais:
+//-----------------------------------------------------
+
+
+
+// 1. Para um clube europeu ter chances de se classificar para Champions League, ele deverá ter feito mais de 60 pontos durante o campeonato. 
+// Caso tenha feito mais de 75, as chances são maiores. Desenvolva uma solução que leia o nome e pontuação do time. Em seguida, usando as 
+// estruturas condicionais, caso a pontuação seja maior do que 75, imprima “Excelentes chances de classificação”. Caso entre 60 e 75,
+//  imprima “Boas chances de se classificar". Caso contrário: “Chances baixas de se classificar”.
+
+
+
+
+// console.log("------- CLASSIFICAÇÃO CHAMPIONS LEAGUE -------");
+
+
+// let name = prompt("Informe o nome do clube: ");
+// let pontuacao = parseInt(prompt("Informe a pontuação: "));
+
+
+
+// if (pontuacao > 60 && pontuacao < 75 ){
+//     console.log("\n",name,"tem boas chances de se classificar");
+
+// }else if (pontuacao > 75){
+//     console.log("\n",name,"tem excelentes chances de classificação");
+
+// }else{
+//     console.log("\n",name,"tem chances baixas de se classificar");
+// }
+
+
+
+// 2. Desenvolva um sistema que leia a idade do usuário. Caso a idade seja maior que 70 anos, imprima a mensagem “Idoso”, caso entre 30 e 70: “Adulto”, 
+// entre 20 e 30: “Jovem Adulto”, entre 15 e 20: “Jovem”, menor do que 15: “Criança ou adolescente”
+
+
+
+// console.log("------- TERMÔMETRO DE IDADE -------");
+
+// let idade = parseInt(prompt("Digite sua idade: "));
+
+// switch (true) { // usando true como (expressão) convervetemos de sequencia de comparações para construções 
+//     case (idade > 70):{
+//         console.log("\nParabéns por ter chegado até aqui, sorria :)");
+//     break;    
+//     }
+//     case (idade > 30 && idade <= 70):{
+//         console.log("\nAdulto");
+//     break;    
+//     }
+//     case (idade > 20 && idade <= 30):{
+//         console.log("\n Jovem adulto");
+//     break;   
+//     }
+//     case (idade > 15 && idade <= 20):{
+//         console.log("\n Jovem Padawan");
+//     break;       
+//     }
+//     default:{
+//         console.log("Criança ou adolescente");
+//     }
+// }
+
+
+
+// 3. Desenvolva um sistema que leia a velocidade de um veiculo. Usando o operador ternário (? e :), caso a velocidade seja maior do 100, 
+// imprimia a mensagem: “Carro em alta velocidade", caso contrário: “Velocidade normal”.
+
+
+ console.log("------- QUAL A SUA VELOCIDADE? -------");
+ 
+ let velocidade = parseInt(prompt("Digite sua velocidade em km/h: "));
+
+ //console.log(velocidade > 100 ? "Carro em alta velocidade" : "Velocidade normal");
+
+ if(velocidade > 100){
+    console.log("Carro em alta velocidade");
+ }else{
+    console.log("Velocidade normal");
+ }
