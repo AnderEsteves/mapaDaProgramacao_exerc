@@ -254,11 +254,12 @@ console.clear();
 
 
 
-
-
 //-----------------------------------------------------
 // Aula 5- Estruturas Condicionais:
 //-----------------------------------------------------
+
+
+
 
 
 
@@ -290,8 +291,10 @@ console.clear();
 
 
 
+
 // 2. Desenvolva um sistema que leia a idade do usuário. Caso a idade seja maior que 70 anos, imprima a mensagem “Idoso”, caso entre 30 e 70: “Adulto”, 
 // entre 20 e 30: “Jovem Adulto”, entre 15 e 20: “Jovem”, menor do que 15: “Criança ou adolescente”
+
 
 
 
@@ -323,18 +326,177 @@ console.clear();
 
 
 
+
 // 3. Desenvolva um sistema que leia a velocidade de um veiculo. Usando o operador ternário (? e :), caso a velocidade seja maior do 100, 
 // imprimia a mensagem: “Carro em alta velocidade", caso contrário: “Velocidade normal”.
 
 
- console.log("------- QUAL A SUA VELOCIDADE? -------");
+
+
+
+//  console.log("------- QUAL A SUA VELOCIDADE? -------");
  
- let velocidade = parseInt(prompt("Digite sua velocidade em km/h: "));
+//  let velocidade = parseInt(prompt("Digite sua velocidade em km/h: "));
 
- //console.log(velocidade > 100 ? "Carro em alta velocidade" : "Velocidade normal");
+//  console.log(velocidade > 100 ? "Carro em alta velocidade" : "Velocidade normal");
 
- if(velocidade > 100){
-    console.log("Carro em alta velocidade");
- }else{
-    console.log("Velocidade normal");
- }
+//  if(velocidade > 100){
+//     console.log("Carro em alta velocidade");
+//  }else{
+//     console.log("Velocidade normal");
+//  }
+
+
+
+
+
+// 4. Crie um programa para identificar se a letra digitada pelo usuário é uma vogal.
+
+// console.log("------- É VOGAL OU NÃO É -------");
+
+// let letra = prompt("Informe uma letra: ");
+
+// console.log(letra === "a" || letra === "e" || letra === "i"|| letra === "o"|| letra === "u"? "a letra é uma vogal" : "a letra não é uma vogal");
+
+
+
+
+
+
+//-----------------------------------------------------
+// Aula 6- Funções:
+//-----------------------------------------------------
+
+
+
+
+
+
+// 1. Desenvolva um sistema que execute uma função para calcular a média de 3 números
+
+
+// function media(num1,num2,num3){
+//     return (num1 + num2 + num3) / 3
+// }
+
+// let primeiroNum = parseInt(prompt("Informe o 1° número: "));
+// let segundoNum = parseInt(prompt("Informe o 2° número: "));
+// let terceiroNum = parseInt(prompt("Informe o 3° número: "));
+
+// let resultado = media(primeiroNum, segundoNum, terceiroNum);
+
+// console.log(resultado);
+
+
+
+
+// 2. Desenvolva uma função para analisar qual o maior número digitado pelo usuário. Dica: armazene em uma variável global qual é o maior 
+// número e trate na função (procedimento) a alteração desse valor. Utilize um lanço de repetição para o usuário inserir os números de forma
+//  ilimitada (Exemplo de condição de parada: digitar 0 para parar ou “s” para continuar)
+
+
+// let simounao = "s";
+// let maiorNumber = 0;
+
+
+// function maiorNum (){
+//     if(number > maiorNumber ){
+//        return maiorNumber = number;
+//      }
+// }
+
+
+// while (simounao === "s"){
+
+//      number = parseInt(prompt("Informe um número: "));
+
+//      maiorNum(number);
+
+//      simounao = prompt("Deseja continuar? digite (s/n) ");
+
+// };
+
+
+// console.log("O maior numero é: ",maiorNumber);
+
+
+
+
+// 3. Escreva um algoritmo que através de uma função identifique se o nome de uma marca de carros inserida pelo 
+//usuário é de origem alemã (Volkswagen, Audio, BMW, Mercedes)
+
+
+// function identifiqueMarca(){
+//     if (marca =="Volkswagen" || marca == "Audi" || marca == "Mercedes"){
+//         console.log("É uma marca alemã! parabéns :)");        
+//     }else{
+//         console.log("Infelizmente não tens um carro alemão :(");
+//     }
+// }
+
+
+// let marca = prompt("Digite a marca do carro: ");
+
+
+// identifiqueMarca();
+
+
+
+// function identifiqueMarca(){
+//     if (marca =="Volkswagen" || marca == "Audi" || marca == "Mercedes"){
+//             return marca = "Carro Top";
+//     }else{
+//         return marca = "Carro Pop";
+//     }
+// }
+
+
+// let marca = prompt("Digite a marca do carro: ");
+
+// console.log (marca);
+
+// identifiqueMarca();
+
+// console.log(marca);
+
+
+function identifiqueMarca(){
+    let marca
+    if (marca =="Volkswagen" || marca == "Audi" || marca == "Mercedes"){
+      return marca = "Carro Top";
+    }else{
+      return marca = "Carro Pop";
+    }
+}
+
+let marca = prompt("Digite a marca do carro: ");
+
+console.log (marca);
+
+identifiqueMarca();
+
+console.log(marca);
+
+console.log(identifiqueMarca());
+
+
+// 4. Desenvolva uma sistema que através de uma função apresente a conversão do real para dólar e euro, utilizando o switch case
+
+
+// function conversao(){
+//     switch (moeda){
+//         case "Dolar":
+//             console.log("A conversão é de", valor * 4.00);
+//         break;    
+//         case "Euro":
+//             console.log("A conversão é de", valor * 2.00);
+//         break;
+//     }
+// };
+
+// let valor = parseInt(prompt("Informe o valor em reais para conversão:"));
+// console.log("\nMoedas para conversão: Dolar/Euro")
+// let moeda = prompt("Informe a moeda desejada:");
+
+// conversao();
+
