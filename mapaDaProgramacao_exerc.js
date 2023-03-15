@@ -436,48 +436,9 @@ console.clear();
 
 
 // let marca = prompt("Digite a marca do carro: ");
-
-
 // identifiqueMarca();
 
 
-
-// function identifiqueMarca(){
-//     if (marca =="Volkswagen" || marca == "Audi" || marca == "Mercedes"){
-//             return marca = "Carro Top";
-//     }else{
-//         return marca = "Carro Pop";
-//     }
-// }
-
-
-// let marca = prompt("Digite a marca do carro: ");
-
-// console.log (marca);
-
-// identifiqueMarca();
-
-// console.log(marca);
-
-
-function identifiqueMarca(){
-    let marca
-    if (marca =="Volkswagen" || marca == "Audi" || marca == "Mercedes"){
-      return marca = "Carro Top";
-    }else{
-      return marca = "Carro Pop";
-    }
-}
-
-let marca = prompt("Digite a marca do carro: ");
-
-console.log (marca);
-
-identifiqueMarca();
-
-console.log(marca);
-
-console.log(identifiqueMarca());
 
 
 // 4. Desenvolva uma sistema que através de uma função apresente a conversão do real para dólar e euro, utilizando o switch case
@@ -499,4 +460,3 @@ console.log(identifiqueMarca());
 // let moeda = prompt("Informe a moeda desejada:");
 
 // conversao();
-
