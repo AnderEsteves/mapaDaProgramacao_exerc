@@ -1,5 +1,5 @@
 const prompt = require("prompt-sync")();
-//console.clear();
+console.clear();
 
 
 //Exercícios de JavaScript - Curso Mapa da Programação
@@ -648,14 +648,16 @@ const prompt = require("prompt-sync")();
 //5.Crie um algoritmo que imprima através de um laço de repetição while e for uma contagem de 1 até 10 crescente e decrescente.
 
 
-let i = 1;
+// let i = 1;
 
-while(i <= 10){
-  console.log(i);
-  i += 1;  
-}
+// while(i <= 10){
+//   console.log(i);
+//   i += 1;  
+// }
 
 
-for(i = 10; i >0; i--){
-  console.log(i);
-}
+// for(i = 10; i >0; i--){
+//   console.log(i);
+// }
+
+//fimdodia
