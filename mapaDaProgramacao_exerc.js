@@ -1,5 +1,5 @@
 const prompt = require("prompt-sync")();
-console.clear();
+//console.clear();
 
 
 //Exercícios de JavaScript - Curso Mapa da Programação
@@ -437,47 +437,10 @@ console.clear();
 
 // let marca = prompt("Digite a marca do carro: ");
 
-
 // identifiqueMarca();
 
 
 
-// function identifiqueMarca(){
-//     if (marca =="Volkswagen" || marca == "Audi" || marca == "Mercedes"){
-//             return marca = "Carro Top";
-//     }else{
-//         return marca = "Carro Pop";
-//     }
-// }
-
-
-// let marca = prompt("Digite a marca do carro: ");
-
-// console.log (marca);
-
-// identifiqueMarca();
-
-// console.log(marca);
-
-
-function identifiqueMarca(){
-    let marca
-    if (marca =="Volkswagen" || marca == "Audi" || marca == "Mercedes"){
-      return marca = "Carro Top";
-    }else{
-      return marca = "Carro Pop";
-    }
-}
-
-let marca = prompt("Digite a marca do carro: ");
-
-console.log (marca);
-
-identifiqueMarca();
-
-console.log(marca);
-
-console.log(identifiqueMarca());
 
 
 // 4. Desenvolva uma sistema que através de uma função apresente a conversão do real para dólar e euro, utilizando o switch case
@@ -500,3 +463,199 @@ console.log(identifiqueMarca());
 
 // conversao();
 
+
+
+
+
+
+
+//-----------------------------------------------------
+// Aula 7 : Objetos:
+//-----------------------------------------------------
+
+
+
+
+// 1. Construa uma solução em que o usuário insira os dados de um aluno (nome, matricula, nota1, nota2, nota3). Salve as informações em um 
+// objeto e crie um método dentro deste objeto que calcule a média das 3 notas. Em seguida, apresente a média final para o usuário.
+
+
+
+// console.log("------- CADASTRO ALUNO -------");
+
+// const aluno = new Object();
+//     aluno.nome = prompt("Nome: ");
+//     aluno.matricula = Number(prompt("Matricula: "));
+//     aluno.nota1 = parseInt(prompt("Nota 1: "));
+//     aluno.nota2 = parseInt(prompt("Nota 2: "));
+//     aluno.nota3 = parseInt(prompt("Nota 3: "));
+//     aluno.media = function(){
+//         return (aluno.nota1 + aluno.nota2 + aluno.nota3) /3 ;
+//     };
+
+
+// console.log("A média do aluno ", aluno.media());
+
+
+
+// 2. Desenvolva um sistema que salve  um objeto uma receita de bolo, seguindo as seguintes informações:
+//     1. Nome da receita
+//     2. Ingredientes
+//     3. Passos para a receita
+// Em seguida, crie um método dentro do objeto que imprima na tela os dados da receita.
+
+
+
+// const receita = new Object();
+//     receita.nome = "Bolo de Cenoura";
+//     receita.ingredientes = "\n 1/2 xícara (chá) de óleo, 3 cenouras médias raladas, 4 ovos, 2 xícaras (chá) de açúcar, 2 e 1/2 xícaras (chá) de farinha de trigo, 1 colher (sopa) de fermento em pó";
+//     receita.modoDePreparo = "\n Em um liquidificador, adicione a cenoura, os ovos e o óleo, depois misture.  Acrescente o açúcar e bata novamente por 5 minutos. Em uma tigela ou na batedeira, adicione a farinha de trigo e depois misture novamente.Acrescente o fermento e misture lentamente com uma colher. Asse em um forno preaquecido a 180° C por aproximadamente 40 minutos.";
+//     receita.mostrar = function(){
+//         switch (escolha){
+//             case "ingredientes":
+//                 console.log(receita.ingredientes);
+//             break;
+//             case "mododepreparo":
+//                 console.log(receita.modoDePreparo);
+//             break;
+            
+//         }
+//     }
+
+// console.log("------- LIVRO DE RECEITA -------");
+// console.log("\nINFORME QUAL ETAPA GOSTARIA DE VER (INGREDIENTES OU MODO DE PREPARO)");
+// let escolha = prompt("Informe o desejado: ");
+// receita.mostrar();
+
+
+
+
+
+//-----------------------------------------------------
+// Aula 8 : Estrutura de Repetição:
+//-----------------------------------------------------
+
+
+
+
+// 1. Construa uma solução que através do loop `for` leia 5 números diferentes. A partir disso, apresente para o usuário qual foi o maior e qual 
+// foi o menor número digitado
+
+
+
+// console.log("------ MAIOR & MENOR NÚMERO ------");
+
+// let qtde = Number(prompt("Informe quantos números deseja escrever: "));
+
+// let maiorNum = 0;
+// let menorNum = 0;
+
+// for(i = 0; i < qtde; i++){
+//     let num = Number(prompt("Digite o "+ (i+1)+ " número: "));
+   
+
+//     if (num > maiorNum) maiorNum = num;
+    
+//     if (!menorNum) menorNum = num;;
+    
+//     if (num < menorNum) menorNum = num;
+
+// }
+
+// console.log("O maior número é: ", maiorNum);
+// console.log("O menor número é: ", menorNum);
+
+
+
+
+// 2. Desenvolva um código que primeiro o usuário insira os dados de um carro (ano, marca, modelo, cor e valor). Em seguida, através do loop `for in`
+//  apresente os dados na tela.
+
+
+
+// console.log("------ CADASTRO DO CARRO -----");
+
+// const carro = new Object();
+//   carro.modelo = prompt("Modelo: ");
+//   carro.marca = prompt("Marca: ");
+//   carro.cor = prompt("Cor: ");
+//   carro.ano = prompt("Ano: ");
+//   carro.valor = Number(prompt("Valor: "));
+
+
+// console.log("------ FICHA TÉCNICA -----");
+
+// for (let propriedade in carro){
+//   console.log(propriedade + " : " + carro[propriedade]);
+// };
+  
+
+
+// 3. Crie uma solução utilizando o comando `while` um sistema que leia nome de países. A cada loop, identifique, por meio de uma função,
+//  se esse país faz parte da América do Sul e apresente essa informação para o usuário. Em seguida, pergunte se ele deseja continuar (s para continuar, 
+//     qualquer outra tecla para parar).
+
+
+// let simounao = "s";
+
+
+// function identificadorPais(pais){
+//   if (pais == "Brasil" || pais =="Argentina" || pais == "Chile" ){
+//    return console.log("Este país faz parte da América do Sul.")
+//   }else {
+//    return console.log("Este país não faz parte da América do Sul.")
+//   }
+// };
+
+
+
+// console.log("----- PAÍS NA AMÉRICA DO SUL -----");
+
+// while(simounao == "s"){
+
+//   let pais = prompt("Digite o nome de um país: ");
+
+//   identificadorPais(pais);
+
+//   simounao = prompt("Deseja continuar? (s/n): ");
+// };
+
+
+
+
+// 4. Desenvolva um sistema que através do comando `do while` identifique se o número digitado é impar. Enquanto o usuário digitar um número 
+// diferente de zero, continue a executar o loop.
+
+
+
+
+//let numberWhile = 0;
+// do{
+
+//   let number = Number(prompt("Digite um número: "));
+//   numberWhile = number;
+
+//   if (number % 2 == 0 ){
+//     console.log("Número PAR");
+//   }else{
+//     console.log("Número ÍMPAR");
+//   }
+// }while(numberWhile != 0);
+
+
+
+
+//5.Crie um algoritmo que imprima através de um laço de repetição while e for uma contagem de 1 até 10 crescente e decrescente.
+
+
+let i = 1;
+
+while(i <= 10){
+  console.log(i);
+  i += 1;  
+}
+
+
+for(i = 10; i >0; i--){
+  console.log(i);
+}
