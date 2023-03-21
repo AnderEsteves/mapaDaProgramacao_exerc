@@ -436,12 +436,18 @@ console.clear();
 
 
 // let marca = prompt("Digite a marca do carro: ");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 17a663f105284f4ee1d11057c5c7e70ce5ed5de5
 // identifiqueMarca();
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 17a663f105284f4ee1d11057c5c7e70ce5ed5de5
 
 // 4. Desenvolva uma sistema que através de uma função apresente a conversão do real para dólar e euro, utilizando o switch case
 
@@ -462,6 +468,7 @@ console.clear();
 // let moeda = prompt("Informe a moeda desejada:");
 
 // conversao();
+<<<<<<< HEAD
 
 
 
@@ -661,3 +668,5 @@ console.clear();
 // }
 
 //fimdodia
+=======
+>>>>>>> 17a663f105284f4ee1d11057c5c7e70ce5ed5de5
