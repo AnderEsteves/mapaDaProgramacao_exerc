@@ -435,19 +435,13 @@ console.clear();
 // }
 
 
-// let marca = prompt("Digite a marca do carro: ");
-<<<<<<< HEAD
+// let marca = prompt("Digite a marca do carro: ")
 
-=======
->>>>>>> 17a663f105284f4ee1d11057c5c7e70ce5ed5de5
+
 // identifiqueMarca();
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 17a663f105284f4ee1d11057c5c7e70ce5ed5de5
 
 // 4. Desenvolva uma sistema que através de uma função apresente a conversão do real para dólar e euro, utilizando o switch case
 
@@ -468,8 +462,6 @@ console.clear();
 // let moeda = prompt("Informe a moeda desejada:");
 
 // conversao();
-<<<<<<< HEAD
-
 
 
 
@@ -667,6 +659,163 @@ console.clear();
 //   console.log(i);
 // }
 
-//fimdodia
-=======
->>>>>>> 17a663f105284f4ee1d11057c5c7e70ce5ed5de5
+
+
+
+
+
+
+//-----------------------------------------------------
+// Aula 9 : Array:
+//-----------------------------------------------------
+
+
+
+
+// 1. Desenvolva uma solução que preencha dinamicamente através do comando `for` preencha um array de nomes de seus familiares.
+
+
+// console.log("----- FAMÍLIA ------");
+
+// let familia = []
+
+// let qtde = Number(prompt("Informe a quantidade de familiares que deseja cadastrar: "));
+
+// for(i=0;i < qtde; i++){
+//     let nome = prompt("Infome o "+ (i+1)+ "º nome: ");
+//     familia[i] = nome;
+// }
+
+// console.log(familia);
+
+
+
+// 2. Desenvolva uma solução que contenha um array pré definido com valores de itens de supermercado. Solicite o usuário os próximos 3 itens que 
+// serão adicionados e os coloque ao final da listagem. Em seguida, imprima a lista final na tela.
+
+
+
+
+// console.log("------- LISTA DE SUPERMERCADO -------");
+
+// const lista = [5.35, 10.87, 12.10, 7.00]
+
+// console.log(lista);
+
+// let simounao = "s";
+
+
+// while(simounao == "s"){
+
+// let qtde = Number(prompt("Informe a quantidade que deseja cadastrar: "));
+
+//  for(i=0;i < qtde; i++){
+//     let valor = Number(prompt("Infome o "+ (i+1)+ "º valor: "));
+//     lista.push(valor);
+//   }
+
+//   simounao = prompt("Deseja continuar cadastrando (s/n) ");
+
+// };
+
+// console.log("Lista Atualizada: ", lista);
+
+
+
+
+
+
+// 3. Crie uma solução que contenha uma listagem pré definida de alunos de uma turma e suas notas. Em seguida, solicite ao usuário que escreve 
+// os próximos 3 alunos e suas respectivas notas. Adicione esses elementos (objetos) ao array no começo da listagem e imprima a lista na tela. 
+// Em seguida, remova os 3 últimos elementos da listagem e imprima o resultado final e o tamanho da listagem.
+
+
+
+
+// console.log("------ LISTA DE ALUNOS ------");
+
+// const nomes = ["Anderson", "Luan", "Jow"]
+// const notas = [9, 10, 7]
+
+// function listaTurma (){
+//     console.log(nomes);
+//     console.log(notas);
+   
+// }
+
+// let qtde = Number(prompt("Informe a quantidade de alunos que deseja cadastrar: "));
+
+// if (qtde > 0 ){
+
+//     for(i=0; i < qtde; i++){
+//         let nome = prompt("Informe o "+ (i+1)+ "º nome: ");
+//         nomes.unshift(nome);
+//         let nota = Number(prompt("Informe o valor da  "+ (i+1)+ "º nota: "));
+//         notas.unshift(nota);
+//     }
+
+//     listaTurma();
+
+
+//     let qtdeRemover = Number(prompt("Informe a quantidade de alunos que deseja remover: "));
+
+//     if (qtdeRemover > 0){
+        
+//         for(i=0; i< qtdeRemover; i++){
+//             nomes.pop()
+//             notas.pop()
+//         }
+
+//         listaTurma();
+//     }
+
+// }else{
+//     console.log("Bye");
+// }
+
+
+//4.Desenvolva um algoritmo que leia a nota de 7 alunos e salve os valores nas posições de um array. Em seguida, apresente cada uma das notas inseridas.
+
+
+
+// console.log("------- NOTAS DE 7 ALUNOS ------- ");
+// const notas = []
+
+// for(i=0; i <7; i++){
+//     let nota = Number(prompt("Informe a "+(i+1)+" º nota: "));
+//     notas[i] = nota;
+// }
+
+// notas.map((Element, i) => {
+//     console.log(i, Element);
+// })
+
+
+//5.Escreva um programa que contenha um vetor que possua 5 nomes diferentes. Em seguida, por meio de um laço de repetição, solicite ao 
+//usuário que insira um nome e, em seguida, escreva se o nome está presente ou não no vetor e em qual posição.
+
+
+console.log("------- NOME NA LISTA? -------");
+
+const names = ['Ander', 'Jow', 'Lucas', 'Gabriela', 'Julia']
+
+let simounao = "s";
+
+while(simounao == "s"){
+
+    let name = prompt("Informe um nome: ");
+
+     
+    console.log("O nome está na lista: ", names.includes(name));
+
+
+    simounao = prompt("Deseja continuar? (s/n)");  
+
+}
+
+
+// let c = names.map((Element) =>{
+//     return Element;
+// })
+
+// console.log(c);
