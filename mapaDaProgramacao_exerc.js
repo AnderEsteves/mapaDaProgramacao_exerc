@@ -795,23 +795,25 @@ console.clear();
 //usuário que insira um nome e, em seguida, escreva se o nome está presente ou não no vetor e em qual posição.
 
 
-console.log("------- NOME NA LISTA? -------");
+// console.log("------- NOME NA LISTA? -------");
 
-const names = ['Ander', 'Jow', 'Lucas', 'Gabriela', 'Julia']
+// const names = ['Ander', 'Jow', 'Lucas', 'Gabriela', 'Julia']
 
-let simounao = "s";
+// let simounao = "s";
 
-while(simounao == "s"){
+// while(simounao == "s"){
 
-    let name = prompt("Informe um nome: ");
+//     let name = prompt("Informe um nome: ");
 
      
-    console.log("O nome está na lista: ", names.includes(name));
+//     console.log("O nome está na lista: ", names.includes(name));
 
 
-    simounao = prompt("Deseja continuar? (s/n)");  
 
-}
+
+//     simounao = prompt("Deseja continuar? (s/n)");  
+
+// }
 
 
 // let c = names.map((Element) =>{
@@ -819,3 +821,65 @@ while(simounao == "s"){
 // })
 
 // console.log(c);
+
+
+
+
+
+//6.Desenvolva um programa que tenha uma lista de compras 4 itens de tecnologia que você deseja comprar futuramente. Em seguida, 
+// por meio do terminal, escreva mais 2 elementos que deseja inserir nessa listagem. Pela função splice, remova os 2 últimos elementos e 
+// adicione esses dois novos. Ao final, imprima a nova listagem na tela.
+
+
+
+
+
+// function addElemento(newProduct, posicaoInicial){
+
+//    return lista.splice(posicaoInicial, 0, newProduct);
+
+// }
+
+
+// const lista = ['monitor', 'teclado', 'mouse', 'placa de vídeo']
+
+// console.log(lista);
+
+
+// let simounao = prompt("Deseja adicionar mais itens a lista (s/n): ");
+
+
+// if (simounao == "s"){
+
+//     let posicaoInicial = Number(prompt("Com base no indice da array, escolha um número para adicionar o próximo item na sequencia: "));
+
+//     let newProduct = prompt("Informe o produto que deseja: ");
+
+//     addElemento(newProduct, posicaoInicial);
+
+
+//     simounao = prompt("Deseja adicionais mais itens a lista (s/n): ");
+
+//     console.log(lista);
+
+// }else{
+//     console.log("bye");
+
+
+
+
+
+// 7.Crie um algoritmo que tenha uma listagem (fixa) com os carros dos seus sonhos, contendo o nome e valor dos veículos, e deixe a
+//  listagem manualmente ordenada de acordo com o valor. Em seguida, pela função slice, separe em dois novos arrays os veículos que tem valor
+//   abaixo e acima de 100mil reais. Imprima na tela as duas listagens.
+
+
+
+
+ const listCars = ['Ferrari', 'Porsche', 'Dodge','Bmw','Ford','Volkswagen', 1000000, 400000, 350000, 140000,120000,60000]
+ 
+ console.log(listCars);
+
+const listNewCars = listCars.slice(3,5 && 8,11);
+
+console.log(listNewCars);
