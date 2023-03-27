@@ -868,18 +868,106 @@ console.clear();
 
 
 
-
-// 7.Crie um algoritmo que tenha uma listagem (fixa) com os carros dos seus sonhos, contendo o nome e valor dos veículos, e deixe a
-//  listagem manualmente ordenada de acordo com o valor. Em seguida, pela função slice, separe em dois novos arrays os veículos que tem valor
-//   abaixo e acima de 100mil reais. Imprima na tela as duas listagens.
+//7.Desenvolva um programa que tenha uma lista de desejos com  4 itens de casa que você deseja comprar futuramente. Em seguida, 
+// separe os items em dois arrays, um para intens de cozinha e outros para o quarto usando o método slice.
 
 
+// let listaDeCasa = ['televisão', 'abajur', 'panelas de aluminium', 'geladeira']
+
+// let listaQuarto = listaDeCasa.slice(0,2)
+
+// console.log(listaQuarto);
+
+// let listaCozinha = listaDeCasa.slice(2)
+
+// console.log(listaCozinha)
+
+// console.log(list)
 
 
- const listCars = ['Ferrari', 'Porsche', 'Dodge','Bmw','Ford','Volkswagen', 1000000, 400000, 350000, 140000,120000,60000]
- 
- console.log(listCars);
 
-const listNewCars = listCars.slice(3,5 && 8,11);
 
-console.log(listNewCars);
+
+
+//-----------------------------------------------------
+// Aula 10 & 11  : Interação com Array:
+//-----------------------------------------------------
+
+
+// 1.Escreva um programa que contenha uma listagem com ficha de funcionários, contendo nome e valor do salário. Utilizando o comando for, 
+// passe por cada um dos elementos do array, e dê um bônus salarial de 5% a mais para cada funcionário.
+
+
+
+// console.log('----- LISTA DE FUNCIONÁRIOS -----');
+
+// const funcionarios = [{
+//     nome: 'Anderson',
+//     salario: 500,
+//     salarioAtualizado:undefined
+//     },{
+//         nome: 'Luana',
+//         salario: 700,
+//         salarioAtualizado:undefined
+//     },{
+//         nome: 'Viktor',
+//         salario: 900,
+//         salarioAtualizado:undefined
+//     }
+// ];
+
+
+// // for(let i=0; i < funcionarios.length;i++){
+// //     console.log(funcionarios[i])
+// // }
+
+// for(let i=0; i < funcionarios.length;i++){
+
+//     funcionarios[i].salarioAtualizado = (funcionarios[i].salario * 0.05) + funcionarios[i].salario
+//     console.log('\n',funcionarios[i])
+// }
+
+
+
+
+// 2. Utilizando o comando `for of` passe por cada elemento de uma listagem de clientes de uma empresa. Cada dado de cliente deve conter: nome do cliente, 
+//  dois saldos a receber (saldo1, saldo2). Calcule o saldo total de cada cliente, adicione essa nova propriedade ao elemento respectivo da lista. Ao 
+// final, imprima toda listagem na tela.
+
+
+
+const funcionarios = [{
+
+        nome: 'luan',
+        saldo1: 200,
+        saldo2: 500,
+        total: undefined,
+    },{
+        nome: 'louis',
+        saldo1: 500,
+        saldo2: 300,
+        total: undefined,
+
+
+    }
+];
+
+for(let saldos of funcionarios){
+    
+    funcionarios.total = funcionarios.saldo1 + funcionarios.saldo2
+
+    console.log(funcionarios)
+}
+
+
+
+
+
+// 3. Crie um algoritmo que tenha uma listagem com os carros dos seus sonhos, contendo o nome e valor dos veículos, e deixe a listagem ordenada de 
+// acordo com o valor *(sort)*. Em seguida, pela função `filter`, separe em dois novos arrays os veículos que tem valor abaixo e acima de 100mil reais. 
+// Imprima na tela as duas listagens.
+
+// 4. Crie um programa que solicitei que o usuário entre com 5 nome de jogadores e a quantidade de gols e assistências na temporada. Em seguida, através
+//  do comando `forEach`, imprima na tela a quantidade total de lances para gol (gols + assistência) esse jogador contribuiu.
+
+// 5. Escreva um sistema que o usuário insira as notas de 10 alunos de uma faculdade. Em seguida, através do comando sort, ordene a listagem de notas.
