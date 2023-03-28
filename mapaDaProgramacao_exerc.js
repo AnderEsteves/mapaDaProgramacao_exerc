@@ -590,6 +590,70 @@ console.clear();
   
 
 
+
+//------------------------- outros exemplos de for in e for of (estudo) -------------------------------------
+
+
+
+
+// let carro = new Object();
+//   carro.modelo = prompt("Modelo: ");
+//   carro.marca = prompt("Marca: ");
+
+
+
+// // propriedade
+// for(let i in carro){
+//     console.log(i)
+// }  
+
+// //valor 
+// for(let i in carro){
+//     console.log(carro[i])
+// }  
+
+// //ambos
+// for(let i in carro){
+//     console.log(i , carro[i])
+// }  
+
+
+// const number = ['lua', 'sol', 'terra', 'jupter'];
+
+// console.log("in 1");
+// // propriedade
+// for(let i in number){
+//     console.log(i)
+// }  
+
+// console.log("in 2");
+// //valor 
+// for(let i in number){
+//     console.log(number[i])
+// }  
+
+// console.log("in 3");
+// //ambos
+// for(let i in number){
+//     console.log(i , number[i])
+// }  
+
+// console.log("tradicional 4");
+// for(let i =0; i < number.length; i++){
+//     console.log(i ,number[i])
+// }
+
+
+// console.log("of 5");
+// //valor
+// for(let x of number){
+//     console.log(x)
+// }
+
+
+//---------------------------------------------------------------------------- 
+
+
 // 3. Crie uma solução utilizando o comando `while` um sistema que leia nome de países. A cada loop, identifique, por meio de uma função,
 //  se esse país faz parte da América do Sul e apresente essa informação para o usuário. Em seguida, pergunte se ele deseja continuar (s para continuar, 
 //     qualquer outra tecla para parar).
@@ -894,6 +958,8 @@ console.clear();
 //-----------------------------------------------------
 
 
+
+
 // 1.Escreva um programa que contenha uma listagem com ficha de funcionários, contendo nome e valor do salário. Utilizando o comando for, 
 // passe por cada um dos elementos do array, e dê um bônus salarial de 5% a mais para cada funcionário.
 
@@ -936,38 +1002,122 @@ console.clear();
 
 
 
-const funcionarios = [{
+// const funcionarios = [{
 
-        nome: 'luan',
-        saldo1: 200,
-        saldo2: 500,
-        total: undefined,
-    },{
-        nome: 'louis',
-        saldo1: 500,
-        saldo2: 300,
-        total: undefined,
+//         nome: 'luan',
+//         saldo1: 200,
+//         saldo2: 500,
+//     },{
+//         nome: 'louis',
+//         saldo1: 500,
+//         saldo2: 300, 
+//     }
+// ];
 
+// for(let i of funcionarios){
+//     console.log(i);
+// };
 
-    }
-];
+// for(let i of funcionarios){
 
-for(let saldos of funcionarios){
+//     i.total = i.saldo1 + i.saldo2
+
+//     console.log(i);
+// };
+
+// for (let i of funcionarios){
+//     console.log("sobrenome do " + i+1 + " º funcionário. ");
+//      i.sobrenome = prompt("Informe seu sobrenome: ");
+
+//      funcionarios.splice (1,2, i.sobrenome);
     
-    funcionarios.total = funcionarios.saldo1 + funcionarios.saldo2
+// }
 
-    console.log(funcionarios)
-}
-
+//console.log(funcionarios);
 
 
 
+//const frutas = ['pera', 'maça', 'abacaxi'];
+//console.log(frutas);
 
-// 3. Crie um algoritmo que tenha uma listagem com os carros dos seus sonhos, contendo o nome e valor dos veículos, e deixe a listagem ordenada de 
-// acordo com o valor *(sort)*. Em seguida, pela função `filter`, separe em dois novos arrays os veículos que tem valor abaixo e acima de 100mil reais. 
+
+// const frutas2 = [{nome:'pera', cor: 'verde', peso:200}];
+
+// frutas2.splice(0,frutas2.nome = "mamão");
+
+// console.log(frutas2);
+
+
+
+
+// var person = { name: 'Max', age: 23 };
+ 
+// person.sex = 'Male';
+// console.log(person);
+ 
+/*
+    Resultado: { name: 'Max', age: 23, sex: 'Male' }
+*/
+
+
+// const person = [{ name: 'Max', age: 23 },{name: 'lucas', age: 12}];
+
+// console.log(person);
+
+// for(let i of person){
+//     i.sex = 'Male'
+// }
+
+// person.forEach(function(item) {
+//     item.sex = 'Male';
+//   });
+  
+
+  
+
+//console.log(person);
+
+
+// 3. Crie um algoritmo que tenha uma listagem com de carros , contendo o nome e valor dos veículos, e deixe a listagem ordenada de 
+// acordo com o valor *(sort)*. Em seguida, pela função `filter`, separe em dois novos arrays os veículos que tem valor abaixo e acima de 10mil reais. 
 // Imprima na tela as duas listagens.
+
+
+
+const listaCarros2 =[{
+    carro: 'gol',
+    valor: 20000,
+},{
+    carro: 'corsa',
+    valor: 10000,
+
+},{
+    carro: 'polo',
+    valor: 50000,
+},{
+    carro: 'uno mille',
+    valor: 5000,
+}];
+
+
+listaCarros2.sort(function(e1, e2){
+   return e1.valor - e2.valor
+});
+
+const listaAbaixo = listaCarros2.filter(function(item){
+    return item.valor <=10000
+});
+    
+
+const listaAcima = listaCarros2.filter(function(item){
+    return item.valor >10000
+});
+
+console.log("       ----- LISTA DE CARROS -----\n",listaCarros2);
+console.log("   ----- LISTA DE CARRO ABAIXO DE 10K -----\n",listaAbaixo);
+console.log("   ----- LISTA DE CARRO ACIMA DE 10K -----\n",listaAcima);
+
+
 
 // 4. Crie um programa que solicitei que o usuário entre com 5 nome de jogadores e a quantidade de gols e assistências na temporada. Em seguida, através
 //  do comando `forEach`, imprima na tela a quantidade total de lances para gol (gols + assistência) esse jogador contribuiu.
-
-// 5. Escreva um sistema que o usuário insira as notas de 10 alunos de uma faculdade. Em seguida, através do comando sort, ordene a listagem de notas.
