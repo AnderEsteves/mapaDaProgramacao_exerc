@@ -1060,7 +1060,7 @@ console.clear();
 */
 
 
-// const person = [{ name: 'Max', age: 23 },{name: 'lucas', age: 12}];
+// const person = [{ nome: 'Max', idade: 23 },{nome: 'lucas', idade: 12}];
 
 // console.log(person);
 
@@ -1072,9 +1072,6 @@ console.clear();
 //     item.sex = 'Male';
 //   });
   
-
-  
-
 //console.log(person);
 
 
@@ -1084,40 +1081,284 @@ console.clear();
 
 
 
-const listaCarros2 =[{
-    carro: 'gol',
-    valor: 20000,
-},{
-    carro: 'corsa',
-    valor: 10000,
+// const listaCarros2 =[{
+//     carro: 'gol',
+//     valor: 20000,
+// },{
+//     carro: 'corsa',
+//     valor: 10000,
 
-},{
-    carro: 'polo',
-    valor: 50000,
-},{
-    carro: 'uno mille',
-    valor: 5000,
-}];
+// },{
+//     carro: 'polo',
+//     valor: 50000,
+// },{
+//     carro: 'uno mille',
+//     valor: 5000,
+// }];
+
+// ordem alfabética com número
+
+// listaCarros2.sort(function(e1, e2){
+//    return e1.valor - e2.valor
+// });
 
 
-listaCarros2.sort(function(e1, e2){
-   return e1.valor - e2.valor
-});
+// ordem alfabética
 
-const listaAbaixo = listaCarros2.filter(function(item){
-    return item.valor <=10000
-});
+// listaCarros2.sort((a,b) => (a.carro> b.carro) ? 1 : ((b.carro> a.carro) ? -1 : 0));
+
+// console.log(listaCarros2);
+
+
+// const listaAbaixo = listaCarros2.filter(function(item){
+//     return item.valor <=10000
+// });
     
 
-const listaAcima = listaCarros2.filter(function(item){
-    return item.valor >10000
-});
+// const listaAcima = listaCarros2.filter(function(item){
+//     return item.valor >10000
+// });
 
-console.log("       ----- LISTA DE CARROS -----\n",listaCarros2);
-console.log("   ----- LISTA DE CARRO ABAIXO DE 10K -----\n",listaAbaixo);
-console.log("   ----- LISTA DE CARRO ACIMA DE 10K -----\n",listaAcima);
+// console.log("       ----- LISTA DE CARROS -----\n",listaCarros2);
+// console.log("   ----- LISTA DE CARRO ABAIXO DE 10K -----\n",listaAbaixo);
+// console.log("   ----- LISTA DE CARRO ACIMA DE 10K -----\n",listaAcima);
 
 
 
-// 4. Crie um programa que solicitei que o usuário entre com 5 nome de jogadores e a quantidade de gols e assistências na temporada. Em seguida, através
+// 4. Crie um programa que solicite ao usuário entre com 2 nomes de jogadores e a quantidade de gols e assistências na temporada. Em seguida, através
 //  do comando `forEach`, imprima na tela a quantidade total de lances para gol (gols + assistência) esse jogador contribuiu.
+
+// console.log("----- TABELA DE JOGADORES -----");
+
+// const jogadores = [{
+//     nome: prompt("Informe seu nome:"),
+//     gols: parseInt(prompt("Quantidade de gols na temporada: ")),
+//     assitencia: parseInt(prompt("Quantidade de assistências na temporada: ")),
+// },{
+//     nome: prompt("Informe seu nome:"),
+//     gols: parseInt(prompt("Quantidade de gols na temporada: ")),
+//     assitencia: parseInt(prompt("Quantidade de assistências na temporada: ")),
+// }];
+
+// soma usando for in 
+//  for(let i of jogadores){
+//     i.lances = i.gols + i.assitencia
+//     console.log(i);
+//  };
+
+
+// soma usando o forEach
+//  jogadores.forEach(function(i){
+//     i.lances = i.gols + i.assitencia
+//     return console.log(i);
+//  });
+
+
+// 5. Escreva um sistema que o usuário insira as notas do trimestre. Em seguida, através do comando sort, ordene a listagem de notas.
+
+
+// console.log("----- NOTAS FACULDADE ------");
+
+// const notas = [];
+
+// const quantidadeDeNotas = parseInt(prompt("Informe a quantidade de notas que deseja add: "));
+
+// for(let i= 0; i<quantidadeDeNotas; i++){
+//     let nota = parseInt(prompt("Informe sua nota: "));
+//     notas[i] = nota
+// };
+
+// console.log("\n lista de notas");
+// console.log(notas);
+
+// notas.sort();
+
+// console.log("\n lista de notas ordenadas");
+// console.log(notas);
+
+
+
+
+
+// 6. Desenvolva uma solução em que o usuário insira a ficha atlética de 3 alunos de uma academia, com nome, peso e altura. Em seguida, imprima a 
+//lista ordenada pela altura dos alunos, de forma decrescente e uma segunda lista pelo peso, de forma crescente.
+
+
+
+
+// console.log("----- FICHA TÉCNICA  ------\n");
+
+// const fichaTecnica = [{
+//     nome: prompt("Informe seu nome:"),
+//     altura: parseInt(prompt("Informe sua altura: ")),
+//     peso: parseInt(prompt("Informe seu peso atual: ")),
+// },{
+//     nome: prompt("Informe seu nome:"),
+//     altura: parseInt(prompt("Informe sua altura: ")),
+//     peso: parseInt(prompt("Informe seu peso atual: ")),
+// },{
+//     nome: prompt("Informe seu nome:"),
+//     altura: parseInt(prompt("Informe sua altura: ")),
+//     peso: parseInt(prompt("Informe seu peso atual: ")),
+// }];
+
+
+// console.log("---- ORDENADO POR ALTURA (DECRESCENTE) ----\n");
+
+// fichaTecnica.sort(function(a,b){
+//     return b.altura + a.altura
+// })
+
+// console.log(fichaTecnica);
+
+// console.log("---- ORDENADO POR PESO (CRESCENTE)----\n");
+
+// fichaTecnica.sort(function(a,b){
+//     return a.peso - b.peso
+// })
+
+// console.log(fichaTecnica);
+
+
+
+// 7. Utilizando o exercício anterior, utilize a função `map` para criar um novo array que contenha somente o nome dos alunos e imprima o resultado
+ //na tela.
+
+
+
+// const fichaTecnica = [{
+//     nome: prompt("Informe seu nome:"),
+//     altura: parseInt(prompt("Informe sua altura: ")),
+//    peso: parseInt(prompt("Informe seu peso atual: ")),
+// },{
+//     nome: prompt("Informe seu nome:"),
+//    altura: parseInt(prompt("Informe sua altura: ")),
+//    peso: parseInt(prompt("Informe seu peso atual: ")),
+// },{
+//     nome: prompt("Informe seu nome:"),
+//    altura: parseInt(prompt("Informe sua altura: ")),
+//     peso: parseInt(prompt("Informe seu peso atual: ")),
+// }];
+
+// console.log("---- NOMES----\n");
+// const novaFicha = fichaTecnica.map(function(a){
+//     return a.nome
+// });
+
+
+// console.log(novaFicha);
+
+
+
+
+// 8. Utilizando o exercício 6, utilize a função `filter` para imprimir um array com os alunos que tenham mais de 180 de altura.
+
+//  console.log("----- FICHA TÉCNICA  ------\n");
+
+//  const fichaTecnica = [{
+//     nome: prompt("Informe seu nome:"),
+//      altura: parseInt(prompt("Informe sua altura: ")),
+//      peso: parseInt(prompt("Informe seu peso atual: ")),
+// },{
+//     nome: prompt("Informe seu nome:"),
+//      altura: parseInt(prompt("Informe sua altura: ")),
+//     peso: parseInt(prompt("Informe seu peso atual: ")),
+//  },{
+//       nome: prompt("Informe seu nome:"),
+//       altura: parseInt(prompt("Informe sua altura: ")),
+//       peso: parseInt(prompt("Informe seu peso atual: ")),
+//  }];
+
+// const newArray = fichaTecnica.filter (function(a){
+//     return a.altura > 180;
+// });
+
+
+//  console.log(newArray);
+
+
+
+
+ 
+// 9. Desenvolva um programa que o usuário insira um número ilimitado de itens de supermercado, contendo os valores e nome de cada item.. Através da 
+// função `reduce`, calcule o valor total da compra e apresente o resultado na tela.
+
+
+// let sim_ou_nao = "s";
+
+// console.log("------- LISTA DE COMPRAS -------");
+
+// const listaDeCompras = [];
+
+// listaMercado();
+
+// function listaMercado(){  
+
+//     //for(let i in listaDeCompras){
+//         const nome = prompt("Nome do Produto: ");
+//         listaDeCompras['nome'] = nome;
+
+//         const valor = parseInt(prompt("Valor do Produto: "));
+//         listaDeCompras['valor'] = valor;
+    
+//         decisao(sim_ou_nao);
+//    // };
+ 
+
+// };
+
+// function decisao(sim_ou_nao){
+//     sim_ou_nao = prompt("Gostaria de add mais um produto? (s/n): ");
+
+//     if(sim_ou_nao =="s"){
+//         return listaMercado();
+//     }else{
+//         return console.log(listaDeCompras);
+//     }
+// };
+       
+
+//teste
+
+// const myObject = {};
+
+// for(i = 0; i < 2; i++){
+//     myObject['propB' + i] = 'bar';
+// };
+
+// console.log(myObject);
+
+
+// var myArray = [];
+// for(i = 0; i < 2; i++){
+//     myArray.push({
+//         propA: 'foo',
+//         propB: 'bar'
+//     });
+// };
+
+
+console.log(myArray);
+
+// for(let i of person){
+//     i.sex = 'Male'
+// }
+
+    
+    //console.clear();
+
+//}while(sim_ou_nao == "s");
+
+//console.log(listaDeCompras);
+
+
+
+// 10. Utilizando o exemplo anterior, cheque se na listagem todos os itens tem um valor acima de R$10. Dica: método `every`. Imprima o resultado na tela.
+
+// 11. Utilizando o exercício 8, averigue se algum elemento tem o valor acima de R$50 (função `some`). Imprima o resultado na tela.
+
+// 12. Ainda utilizando o exercício de número 8, busque se há na lista algum elemento que seja “Arroz”, por meio da função `find`. 
+// Imprima o resultado na tela.
+
+
+// 13. Encontre no exercício 8 o index do elemento “Sabão”. Caso não haja (index -1), imprima a informação na tela.
