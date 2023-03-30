@@ -1284,81 +1284,85 @@ console.clear();
 // função `reduce`, calcule o valor total da compra e apresente o resultado na tela.
 
 
-// let sim_ou_nao = "s";
+ let sim_ou_nao = "s";
 
-// console.log("------- LISTA DE COMPRAS -------");
+ console.log("------- ADD PRODUTOS -------");
 
-// const listaDeCompras = [];
+ const listaDeCompras = [];
 
-// listaMercado();
+ addProdudo();
 
-// function listaMercado(){  
+ function addProdudo(){  
 
-//     //for(let i in listaDeCompras){
-//         const nome = prompt("Nome do Produto: ");
-//         listaDeCompras['nome'] = nome;
-
-//         const valor = parseInt(prompt("Valor do Produto: "));
-//         listaDeCompras['valor'] = valor;
+        const nome = prompt("Nome do Produto: ");    
+        const valor = parseFloat(prompt("Valor do Produto: "));
+     
     
-//         decisao(sim_ou_nao);
-//    // };
- 
+        listaDeCompras.push({nome: nome, valor: valor});
+        decisao(sim_ou_nao);
 
-// };
+};
 
-// function decisao(sim_ou_nao){
-//     sim_ou_nao = prompt("Gostaria de add mais um produto? (s/n): ");
+function decisao(sim_ou_nao){
+    sim_ou_nao = prompt("Gostaria de add mais um produto? (s/n): ");
 
-//     if(sim_ou_nao =="s"){
-//         return listaMercado();
-//     }else{
-//         return console.log(listaDeCompras);
-//     }
-// };
-       
-
-//teste
-
-// const myObject = {};
-
-// for(i = 0; i < 2; i++){
-//     myObject['propB' + i] = 'bar';
-// };
-
-// console.log(myObject);
+    if(sim_ou_nao =="s"){
+        return addProdudo();
+    }else{
+        console.clear()
+        return console.log("---- LISTA DE COMPRAS ----\n",listaDeCompras);
+    }
+};
 
 
-// var myArray = [];
-// for(i = 0; i < 2; i++){
-//     myArray.push({
-//         propA: 'foo',
-//         propB: 'bar'
-//     });
-// };
+console.log("---- RESUMO DA COMPRA ----");
 
+const valorTotal = listaDeCompras.reduce(function(total,item){
+    return total + item.valor
+}, 0); //com array de objetos ...o total precisa ser declarado c/ valor inicial 
 
-console.log(myArray);
-
-// for(let i of person){
-//     i.sex = 'Male'
-// }
-
-    
-    //console.clear();
-
-//}while(sim_ou_nao == "s");
-
-//console.log(listaDeCompras);
+console.log("\nValor total da compra R$", valorTotal );
 
 
 
 // 10. Utilizando o exemplo anterior, cheque se na listagem todos os itens tem um valor acima de R$10. Dica: método `every`. Imprima o resultado na tela.
 
+
+const checkValor = listaDeCompras.every(function(item){ // método every trás um resultado boolean referente a TODOS os itens.
+    return item.valor > 10
+})
+
+console.log("\nTodos os produtos são acima de R$10,00: ", checkValor);
+
+
 // 11. Utilizando o exercício 8, averigue se algum elemento tem o valor acima de R$50 (função `some`). Imprima o resultado na tela.
+
+
+const checkValorUnitario = listaDeCompras.some(function(item){
+    return item.valor > 50
+})
+
+console.log("\nTem algum item maior que R$50,00: ", checkValorUnitario);// método some trás um resultado boolean verifica se contem um item ou nao.
+
 
 // 12. Ainda utilizando o exercício de número 8, busque se há na lista algum elemento que seja “Arroz”, por meio da função `find`. 
 // Imprima o resultado na tela.
 
 
-// 13. Encontre no exercício 8 o index do elemento “Sabão”. Caso não haja (index -1), imprima a informação na tela.
+const checkItem = listaDeCompras.find(function(item){
+    return item.nome =="Arroz"
+})
+
+
+console.log("\nMétodo busca item da lista: ", checkItem);
+
+
+// 13. Encontre no exercício 8 o index do elemento “Sabão”. Caso não haja (index -1), imprima a informação na tela. Use o método findIndex
+
+
+const checkIndex = listaDeCompras.findIndex(function(item){
+    return item.nome ==="Leite"
+})
+
+console.log("\nQual o index que se encontra o Leite: ", checkIndex);
+
