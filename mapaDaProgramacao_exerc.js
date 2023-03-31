@@ -1171,7 +1171,7 @@ console.clear();
 // console.log("\n lista de notas");
 // console.log(notas);
 
-// notas.sort();
+// notas.sort(function(a,b){return a-b}); // quando utilizamos number para ordenar precisamos usar uma função para ajudar o metodo.
 
 // console.log("\n lista de notas ordenadas");
 // console.log(notas);
@@ -1284,85 +1284,162 @@ console.clear();
 // função `reduce`, calcule o valor total da compra e apresente o resultado na tela.
 
 
- let sim_ou_nao = "s";
+//  let sim_ou_nao = "s";
 
- console.log("------- ADD PRODUTOS -------");
+//  console.log("------- ADD PRODUTOS -------");
 
- const listaDeCompras = [];
+//  const listaDeCompras = [];
 
- addProdudo();
+//  addProdudo();
 
- function addProdudo(){  
+//  function addProdudo(){  
 
-        const nome = prompt("Nome do Produto: ");    
-        const valor = parseFloat(prompt("Valor do Produto: "));
+//         const nome = prompt("Nome do Produto: ");    
+//         const valor = parseFloat(prompt("Valor do Produto: "));
      
     
-        listaDeCompras.push({nome: nome, valor: valor});
-        decisao(sim_ou_nao);
+//         listaDeCompras.push({nome: nome, valor: valor});
+//         decisao(sim_ou_nao);
 
-};
+// };
 
-function decisao(sim_ou_nao){
-    sim_ou_nao = prompt("Gostaria de add mais um produto? (s/n): ");
+// function decisao(sim_ou_nao){
+//     sim_ou_nao = prompt("Gostaria de add mais um produto? (s/n): ");
 
-    if(sim_ou_nao =="s"){
-        return addProdudo();
-    }else{
-        console.clear()
-        return console.log("---- LISTA DE COMPRAS ----\n",listaDeCompras);
-    }
-};
+//     if(sim_ou_nao =="s"){
+//         return addProdudo();
+//     }else{
+//         console.clear()
+//         return console.log("---- LISTA DE COMPRAS ----\n",listaDeCompras);
+//     }
+// };
 
 
-console.log("---- RESUMO DA COMPRA ----");
+// console.log("---- RESUMO DA COMPRA ----");
 
-const valorTotal = listaDeCompras.reduce(function(total,item){
-    return total + item.valor
-}, 0); //com array de objetos ...o total precisa ser declarado c/ valor inicial 
+// const valorTotal = listaDeCompras.reduce(function(total,item){
+//     return total + item.valor
+// }, 0); //com array de objetos ...o total precisa ser declarado c/ valor inicial 
 
-console.log("\nValor total da compra R$", valorTotal );
+// console.log("\nValor total da compra R$", valorTotal );
 
 
 
 // 10. Utilizando o exemplo anterior, cheque se na listagem todos os itens tem um valor acima de R$10. Dica: método `every`. Imprima o resultado na tela.
 
 
-const checkValor = listaDeCompras.every(function(item){ // método every trás um resultado boolean referente a TODOS os itens.
-    return item.valor > 10
-})
+// const checkValor = listaDeCompras.every(function(item){ // método every trás um resultado boolean referente a TODOS os itens.
+//     return item.valor > 10
+// })
 
-console.log("\nTodos os produtos são acima de R$10,00: ", checkValor);
+// console.log("\nTodos os produtos são acima de R$10,00: ", checkValor);
 
 
 // 11. Utilizando o exercício 8, averigue se algum elemento tem o valor acima de R$50 (função `some`). Imprima o resultado na tela.
 
 
-const checkValorUnitario = listaDeCompras.some(function(item){
-    return item.valor > 50
-})
+// const checkValorUnitario = listaDeCompras.some(function(item){
+//     return item.valor > 50
+// })
 
-console.log("\nTem algum item maior que R$50,00: ", checkValorUnitario);// método some trás um resultado boolean verifica se contem um item ou nao.
+// console.log("\nTem algum item maior que R$50,00: ", checkValorUnitario);// método some trás um resultado boolean verifica se contem um item ou nao.
 
 
 // 12. Ainda utilizando o exercício de número 8, busque se há na lista algum elemento que seja “Arroz”, por meio da função `find`. 
 // Imprima o resultado na tela.
 
 
-const checkItem = listaDeCompras.find(function(item){
-    return item.nome =="Arroz"
-})
+// const checkItem = listaDeCompras.find(function(item){
+//     return item.nome =="Arroz"
+// })
 
 
-console.log("\nMétodo busca item da lista: ", checkItem);
+// console.log("\nMétodo busca item da lista: ", checkItem);
 
 
 // 13. Encontre no exercício 8 o index do elemento “Sabão”. Caso não haja (index -1), imprima a informação na tela. Use o método findIndex
 
 
-const checkIndex = listaDeCompras.findIndex(function(item){
-    return item.nome ==="Leite"
-})
+// const checkIndex = listaDeCompras.findIndex(function(item){
+//     return item.nome ==="Leite"
+// })
 
-console.log("\nQual o index que se encontra o Leite: ", checkIndex);
+// console.log("\nQual o index que se encontra o Leite: ", checkIndex);
+
+
+
+
+
+
+
+//-----------------------------------------------------
+// Aula 12 : Métodos de Cada Type (String e Number):
+//-----------------------------------------------------
+
+
+
+
+
+// 1. Crie uma solução na qual o usuário irá inserir o cadastro de 5 participantes de um evento, contendo nome e sobrenome e tipo de ingresso 
+// (Pista Gold, Pista Premium, Camarote). Utilizando o conceito do array.map, adicione as seguintes propriedades ao cadastro de cada participante: 
+//     1. Nome completo (utilizando interpolação de strings)
+//     2. Tipo de ingresso pista (string includes)
+//     3. Tipo de ingresso formatado (toUpperCase e trim)
+
+
+
+
+
+// const listaUsuario = [];
+
+// let quantidadeUsuario = Number(prompt("Informe quantos usuários deseja cadastrar: "));
+
+//      for(let i = 0; i < quantidadeUsuario; i++){
+
+//         const nome = prompt("Escreva seu nome: ");
+//         const sobrenome = prompt("Escreva seu sobrenome: ");
+
+//         console.log("TIPOS DE INGRESSO: (PISTA GOLD, PISTA PREMIUM, CAMAROTE)\n");
+//         const ingresso = prompt("Digite o tipo do seu ingresso: ");
+
+
+//          listaUsuario.push({Nome: nome, Sobrenome: sobrenome, Ingresso: ingresso});
+//      };
+
+
+// const listaUsuarioAtualizada  =  listaUsuario.map(listaUsuario => {
+//     return 
+// })
+
+
+
+
+//  console.log(listaUsuario);
+
+//  console.log(listaUsuarioAtualizada);
+
+
+
+
+
+
+
+// 2. Desenvolva um sistema que o usuário irá cadastrar um orçamento de obra. Para isso, será necessário inserir os dados no seguinte padrão:
+//     1. Material
+//     2. Custo
+    
+//     O sistema deverá perguntar repetidas vezes até o usuário desejar finalizar.
+//     Ao finalizar, apresente a quantidade de material que inclua a palavra “cimento”, calcule o valor total da obra e formate também o valor 
+//     total seguindo a formatação de moeda no JavaScript
+    
+
+
+
+// 3. Desenvolva um sistema que solicite ao usuário o nome, sobrenome, idade e faculdade e salário de 4 pessoas. Utilizando a interação de arrays, 
+// crie um novo array que contenha no cadastro de cada pessoa, além das informações cadastradas, as inicias da pessoa
+//  (1 letra do nome e 1 letra do sobrenome), se a formação é engenharia ou não, e formate o salário em duas casas decimais.
+
+
+
+
 
