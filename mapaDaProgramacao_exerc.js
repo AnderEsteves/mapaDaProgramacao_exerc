@@ -1399,7 +1399,7 @@ console.clear();
 //         const nome = prompt("Escreva seu nome: ");
 //         const sobrenome = prompt("Escreva seu sobrenome: ");
 
-//         console.log("TIPOS DE INGRESSO: (PISTA GOLD, PISTA PREMIUM, CAMAROTE)\n");
+//         console.log("\nTIPOS DE INGRESSO: (pista gold, pista premium, camarote)");
 //         const ingresso = prompt("Digite o tipo do seu ingresso: ");
 
 
@@ -1407,19 +1407,19 @@ console.clear();
 //      };
 
 
-// const listaUsuarioAtualizada  =  listaUsuario.map(listaUsuario => {
-//     return 
-// })
+// const listaUsuarioAtualizada  =  listaUsuario.map(function(item){
+//     return {
+//         ...item,
+//         nomeCompleto: (`${item.Nome} ${item.Sobrenome}`),
+//         tipoPista: item.Ingresso.includes("camarote"),
+//         toUpperCase: item.Ingresso.toUpperCase(),
+//         trim: item.Ingresso.trim(), 
+        
+//     }
+// });
 
-
-
-
-//  console.log(listaUsuario);
-
-//  console.log(listaUsuarioAtualizada);
-
-
-
+    
+// console.log(listaUsuarioAtualizada);
 
 
 
@@ -1428,10 +1428,69 @@ console.clear();
 //     1. Material
 //     2. Custo
     
+
 //     O sistema deverá perguntar repetidas vezes até o usuário desejar finalizar.
 //     Ao finalizar, apresente a quantidade de material que inclua a palavra “cimento”, calcule o valor total da obra e formate também o valor 
 //     total seguindo a formatação de moeda no JavaScript
     
+
+
+
+let yes_or_not = "s";
+
+const listaDeCompras = [];
+
+console.log("----- LISTA DE COMPRAS -----");
+
+while(yes_or_not =="s"){
+
+    const material = prompt("Produto: ");
+
+    const valor = Number(prompt("Valor: "));
+
+    listaDeCompras.push ({ Produto: material, Preço: valor.toFixed(2)});
+
+    yes_or_not = prompt("Desaja add mais produtos? (s/n)");
+
+}
+console.clear();
+
+console.log("----- CUPOM FISCAL ----- ",listaDeCompras);
+
+// listaDeCompras.map(function(item){
+//     return {
+//     ...item, 
+//      quantiadeProduto: 
+//     }
+// })
+
+let counter = 0;
+
+for (const obj of listaDeCompras) {
+  if (obj.Produto === "cimento") counter++;
+}
+
+console.log(counter);
+
+// const storage = [
+//     { data: '1', status: '0' },
+//     { data: '2', status: '0' },
+//     { data: 'oi', status: '0' },
+//     { data: '2', status: '0' },
+//     { data: '5', status: '0' },
+//     { data: 'oi', status: '0' },
+//     { data: '2', status: '1' },
+//   ];
+  
+//   let counter = 0;
+//   for (const obj of storage) {
+//     if (obj.data === 'oi') counter++;
+//   }
+  
+//   console.log(counter)
+
+//console.log(quantidadeCimento);
+
 
 
 
