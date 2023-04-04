@@ -1436,69 +1436,187 @@ console.clear();
 
 
 
-let yes_or_not = "s";
+// let yes_or_not = "s";
 
-const listaDeCompras = [];
+// const listaDeCompras = [];
 
-console.log("----- LISTA DE COMPRAS -----");
+// console.log("----- LISTA DE COMPRAS -----");
 
-while(yes_or_not =="s"){
+// while(yes_or_not =="s"){
 
-    const material = prompt("Produto: ");
+//     const material = prompt("Produto: ");
 
-    const valor = Number(prompt("Valor: "));
+//     const valor = Number(prompt("Valor: "));
 
-    listaDeCompras.push ({ Produto: material, Preço: valor.toFixed(2)});
+//     listaDeCompras.push ({ Produto: material, Preço: valor});
 
-    yes_or_not = prompt("Desaja add mais produtos? (s/n)");
+//     yes_or_not = prompt("Desaja add mais produtos? (s/n)");
 
-}
-console.clear();
+// }
+// console.clear();
 
-console.log("----- CUPOM FISCAL ----- ",listaDeCompras);
+// console.log("----- CUPOM FISCAL ----- ",listaDeCompras);
 
-// listaDeCompras.map(function(item){
-//     return {
-//     ...item, 
-//      quantiadeProduto: 
-//     }
-// })
+// let counter = 0;
 
-let counter = 0;
+// for (const obj of listaDeCompras) {
+//   if (obj.Produto === "cimento") counter++;
+// }
 
-for (const obj of listaDeCompras) {
-  if (obj.Produto === "cimento") counter++;
-}
+// counter <=1 ? console.log(`\nQuantidade de cimento: ${counter} unidade`) : console.log(`\nQuantidade de cimento: ${counter} unidades`);
 
-console.log(counter);
 
-// const storage = [
-//     { data: '1', status: '0' },
-//     { data: '2', status: '0' },
-//     { data: 'oi', status: '0' },
-//     { data: '2', status: '0' },
-//     { data: '5', status: '0' },
-//     { data: 'oi', status: '0' },
-//     { data: '2', status: '1' },
-//   ];
-  
-//   let counter = 0;
-//   for (const obj of storage) {
-//     if (obj.data === 'oi') counter++;
-//   }
-  
-//   console.log(counter)
 
-//console.log(quantidadeCimento);
+// const somaTotal = listaDeCompras.reduce(function(total, item){
+//   return total + item.Preço
+// }, 0)
+
+
+// //somaTotal <=1 ? console.log(`\nValor total: R$${somaTotal.toFixed(2)} real`) : console.log(`\nValor total: R$${somaTotal.toFixed(2)} reais`) // outro formato de mostrar o resultado abaixo
+
+
+// let total = new Intl.NumberFormat("pt-BR",{ style:"currency", currency: "BRL",}).format(somaTotal);
+
+// total <= 1 ? console.log(`\nValor total da compra: R$${total} real`) : console.log(`\nValor total da compra: R$${total} reais`) 
 
 
 
 
-// 3. Desenvolva um sistema que solicite ao usuário o nome, sobrenome, idade e faculdade e salário de 4 pessoas. Utilizando a interação de arrays, 
+
+
+// 3. Desenvolva um sistema que solicite ao usuário o nome, sobrenome, idade,  faculdade e salário de 4 pessoas. Utilizando a interação de arrays, 
 // crie um novo array que contenha no cadastro de cada pessoa, além das informações cadastradas, as inicias da pessoa
 //  (1 letra do nome e 1 letra do sobrenome), se a formação é engenharia ou não, e formate o salário em duas casas decimais.
 
 
 
+// let sim_ou_nao = "s";
+
+//  console.log("------- ADD PRODUTOS -------");
+
+//  const listaDeCompras = [];
+
+//  addProdudo();
+
+//  function addProdudo(){  
+
+//         const nome = prompt("Nome do Produto: ");    
+//         const valor = parseFloat(prompt("Valor do Produto: "));
+     
+    
+//         listaDeCompras.push({nome: nome, valor: valor});
+//         decisao(sim_ou_nao);
+
+// };
+
+// function decisao(sim_ou_nao){
+//     sim_ou_nao = prompt("Gostaria de add mais um produto? (s/n): ");
+
+//     if(sim_ou_nao =="s"){
+//         return addProdudo();
+//     }else{
+//         console.clear()
+//         return console.log("---- LISTA DE COMPRAS ----\n",listaDeCompras);
+//     }
+// };
 
 
+
+
+
+// const listaUsuario = [];
+
+
+// function listaDeUsuario(){
+//   console.log("----- LISTA DE USUÁRIOS CADASTRADOS -----");
+
+//   console.log(listaUsuario);
+
+//   console.log("-----------------------------------------");
+
+//   const voltarMenu = prompt("Deseja voltar ao menu ou sair? (m - menu/ s - sair)");
+  
+//   console.clear();
+
+//   voltarMenu == "m" ? menu() : console.log("Bye");
+
+// };
+
+
+
+// function menuDecisao(decisao){
+
+//   if(decisao == 1){
+//      addIUsuario()
+//   }
+//   else if (decisao == 2){
+//     listaDeUsuario()
+//   }
+//   else if (decisao == 3){
+//     console.log("Bye Bye");
+//   }
+//   else {
+//     console.log("Número errado, digite corretamente");
+//      menu();
+//   };
+
+// };
+
+
+
+// function decisaoCadastro(){
+
+//   const newCadastro = prompt("Deseja cadastrar outro usuário? (s/n)");
+
+//   newCadastro == "s" ? addIUsuario() : menu();
+
+// };
+
+
+
+// function addIUsuario(){
+
+//   console.clear();
+
+//   console.log("-----CADASTRO DE USUÁRIO-----");
+
+//   const nome = prompt("Informe seu nome: ");
+
+//   const sobrenome = prompt("Informe seu sobrenome: ");
+
+//   const idade = Number(prompt("Idade: "));
+
+//   const faculdade = prompt("Qual curso da faculcade realiza:");
+
+//   const salario = parseFloat(prompt("Informe seu salário: "));
+
+//   listaUsuario.push ({ nome: nome, sobrenome: sobrenome, idade: idade, faculdade: faculdade, salario: salario});
+
+//  decisaoCadastro();
+
+// };
+
+
+
+// menu();
+
+// function menu(){
+
+//   console.log("----- BEM VINDO AO MENU DE CADASTRO -----");
+
+//   console.log("Escolha o número desejado:","\n(1) - CADASTRAR USUÁRIO\n", "\n(2) - APRESENTAR LISTA DE USUÁRIO\n", "\n(3) - SAIR\n");
+
+//   console.log("-----------------------------------------");
+
+//   decisao = parseInt(prompt("Informe o número:"));
+
+//   console.clear();
+
+//   menuDecisao(decisao)
+
+// };
+
+
+
+
+       
