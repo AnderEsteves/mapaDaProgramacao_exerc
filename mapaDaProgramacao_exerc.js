@@ -1490,54 +1490,36 @@ console.clear();
 
 
 
-// let sim_ou_nao = "s";
-
-//  console.log("------- ADD PRODUTOS -------");
-
-//  const listaDeCompras = [];
-
-//  addProdudo();
-
-//  function addProdudo(){  
-
-//         const nome = prompt("Nome do Produto: ");    
-//         const valor = parseFloat(prompt("Valor do Produto: "));
-     
-    
-//         listaDeCompras.push({nome: nome, valor: valor});
-//         decisao(sim_ou_nao);
-
-// };
-
-// function decisao(sim_ou_nao){
-//     sim_ou_nao = prompt("Gostaria de add mais um produto? (s/n): ");
-
-//     if(sim_ou_nao =="s"){
-//         return addProdudo();
-//     }else{
-//         console.clear()
-//         return console.log("---- LISTA DE COMPRAS ----\n",listaDeCompras);
-//     }
-// };
-
-
-
-
 
 // const listaUsuario = [];
 
+// const listaUsuarioImprissao = "";
 
-// function listaDeUsuario(){
+
+
+
+// function listaDeUsuario(listaUsuarioImprissao){
 //   console.log("----- LISTA DE USUÁRIOS CADASTRADOS -----");
 
-//   console.log(listaUsuario);
+//   listaUsuarioImprissao = listaUsuario.map(function(item){
+//     return{
+//         Nome: (`${item.nome} ${item.sobrenome}`),
+//         Letra_Inicial: (`"nome:"${item.nome.charAt(0)} "sobrenome:"${item.sobrenome.charAt(0)}`),
+//         Idade: (`${item.idade} anos`),
+//         Faculdade:(`Curso da faculdade é engenharia? : ${item.faculdade.includes("engenharia")}`),
+//         Salario:(`R$${item.salario.toFixed(2)}`),
+//     }
+
+//   });   
+
+//   console.log(listaUsuarioImprissao);
 
 //   console.log("-----------------------------------------");
 
 //   const voltarMenu = prompt("Deseja voltar ao menu ou sair? (m - menu/ s - sair)");
-  
+ 
 //   console.clear();
-
+ 
 //   voltarMenu == "m" ? menu() : console.log("Bye");
 
 // };
@@ -1545,21 +1527,22 @@ console.clear();
 
 
 // function menuDecisao(decisao){
-
-//   if(decisao == 1){
-//      addIUsuario()
-//   }
-//   else if (decisao == 2){
-//     listaDeUsuario()
-//   }
-//   else if (decisao == 3){
-//     console.log("Bye Bye");
-//   }
-//   else {
-//     console.log("Número errado, digite corretamente");
-//      menu();
-//   };
-
+// //decisao = decisao == 1 ? addIUsuario()  : decisao == 2 ? listaDeUsuario() : decisao == 3? console.log("Bye Bye") : menu();
+   
+//     switch(true){
+//         case decisao == 1:
+//             addIUsuario()
+//         break;    
+//         case decisao == 2:
+//             listaDeUsuario()
+//         break;
+//         case decisao == 3:
+//             console.log("Bye Bye");
+//            // menu();  
+//          break;
+//         default:
+//              menu();     
+//     };
 // };
 
 
@@ -1567,7 +1550,9 @@ console.clear();
 // function decisaoCadastro(){
 
 //   const newCadastro = prompt("Deseja cadastrar outro usuário? (s/n)");
-
+  
+//   console.clear();
+  
 //   newCadastro == "s" ? addIUsuario() : menu();
 
 // };
@@ -1588,7 +1573,7 @@ console.clear();
 
 //   const faculdade = prompt("Qual curso da faculcade realiza:");
 
-//   const salario = parseFloat(prompt("Informe seu salário: "));
+//   const salario = parseInt(prompt("Informe seu salário: "));
 
 //   listaUsuario.push ({ nome: nome, sobrenome: sobrenome, idade: idade, faculdade: faculdade, salario: salario});
 
@@ -1608,15 +1593,83 @@ console.clear();
 
 //   console.log("-----------------------------------------");
 
-//   decisao = parseInt(prompt("Informe o número:"));
+//   decisao = Number(prompt("Informe o número:"));
 
 //   console.clear();
 
-//   menuDecisao(decisao)
+//   return menuDecisao(decisao)
 
 // };
 
 
 
 
+//-----------------------------------------------------
+// Aula 13: Datas:
+//-----------------------------------------------------
+
        
+// 1. Desenvolva um sistema que solicite o usuário o dia, mês e ano. Em seguida, apresente a data no formato de date string, UTC e ISO.
+
+
+
+
+// console.log("----- APRESENTAÇÃO DE DATAS ----- ");
+ 
+
+// const informeData = prompt("Informe a data de hoje no seguinte formato DD-MM-AAAA : ");
+
+// const dataArray = informeData.split("-");
+
+// const data = new Date();
+// data.setDate(dataArray[0]);
+// data.setMonth(dataArray[1]-1);
+// data.setFullYear(dataArray[2]);
+
+
+// console.log(`\nFormato UTC : ${data.toUTCString()}\n`);
+// console.log(`\nFormato ISO : ${data.toISOString()}\n`);
+// console.log(`\nFormato String : ${data.toString()}\n`);
+
+
+
+// console.log("--------------------------------");
+
+
+
+
+// 2. Crie um sistema que solicite o usuário o cadastro de 5 participantes de um processo seletivo para uma bolsa escolar, contento nome e data 
+// de nascimento (ano-mes-dia). A partir disso, apresente quantos nasceram no mesmo ano e quantos nasceram no mesmo mês.
+
+
+// const listaUsuario = [];
+
+// function letreiro(){
+//     console.log("----- CADASTRO DE USUÁRIOS ----- ");
+// };
+
+// letreiro();
+
+// const quantidade = parseInt(prompt("Informe a quantidade de usuários para cadastro: "));
+
+// console.clear();
+
+// quantidade = 0 ? console.log("Quantidade Insuficiente.") : 
+
+
+
+// while( quantidade <= quantidade){
+
+// letreiro();
+
+// const nome = prompt("Nome: ");
+
+// const dataNascimento = prompt("Data de Nascimento (dd/mm/aaaa): ");
+
+// console.clear();
+// };
+
+
+
+// 3. Escreva um algoritmo que o usuário entre a hora que solicitou um taxi. Em seguida, apresente a mensagem: “Solicitação confirmada em: [apresente a data]”. 
+// Depois, solicite a previsão de minutos para chegada”. Finalizando, apresente a data final estimada para chegada ao destino.
