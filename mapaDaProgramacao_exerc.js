@@ -1642,7 +1642,10 @@ console.clear();
 // de nascimento (ano-mes-dia). A partir disso, apresente quantos nasceram no mesmo ano e quantos nasceram no mesmo mês.
 
 
+
+
 // const listaUsuario = [];
+
 
 // function letreiro(){
 //     console.log("----- CADASTRO DE USUÁRIOS ----- ");
@@ -1654,20 +1657,53 @@ console.clear();
 
 // console.clear();
 
-// quantidade = 0 ? console.log("Quantidade Insuficiente.") : 
 
-
-
-// while( quantidade <= quantidade){
 
 // letreiro();
 
-// const nome = prompt("Nome: ");
+// for(let i=0; i < quantidade; i++){
 
-// const dataNascimento = prompt("Data de Nascimento (dd/mm/aaaa): ");
+//     console.log(`\nUsuário Nº${i+1}\n`);
 
-// console.clear();
+//     const nome = prompt("Nome: ");
+
+//     const dataNascimento = prompt("Data de Nascimento (dd-mm-aaaa): ");
+
+//     const dataSeparado = dataNascimento.split("-");
+
+//     listaUsuario.push ({nome: nome, data_de_nascimento:dataSeparado, dia: dataSeparado[0], mes: dataSeparado[1], ano:dataSeparado[2]});
+
+//     console.clear();
+
 // };
+
+
+
+// const listaDatas = [];
+
+// let total = [];
+
+// for(let i=0; i < 2; i++){
+// const dataNascimento = prompt("Data de Nascimento (dd-mm-aaaa): ");
+
+// const dataSeparado = dataNascimento.split("-");
+
+// listaDatas.push ({mes: dataSeparado [1], ano: dataSeparado[2]});
+
+// };
+
+// for(let i of listaDatas){
+//     if(i.mes == i.mes){
+//        return total[i] += 1;
+//     }
+//     console.log(total);
+// }
+
+
+
+
+
+//console.log(listaDatas);
 
 
 
