@@ -1644,38 +1644,61 @@ console.clear();
 
 
 
-// const listaUsuario = [];
+const listaUsuario = [];
 
 
-// function letreiro(){
-//     console.log("----- CADASTRO DE USUÁRIOS ----- ");
-// };
+function letreiro(){
+    console.log("----- CADASTRO DE USUÁRIOS ----- ");
+};
 
-// letreiro();
+letreiro();
 
-// const quantidade = parseInt(prompt("Informe a quantidade de usuários para cadastro: "));
+const quantidade = parseInt(prompt("Informe a quantidade de usuários para cadastro: "));
 
-// console.clear();
+console.clear();
 
 
 
-// letreiro();
+letreiro();
 
-// for(let i=0; i < quantidade; i++){
+for(let i=0; i < quantidade; i++){
 
-//     console.log(`\nUsuário Nº${i+1}\n`);
+    console.log(`\nUsuário Nº${i+1}\n`);
 
-//     const nome = prompt("Nome: ");
+    const nome = prompt("Nome: ");
 
-//     const dataNascimento = prompt("Data de Nascimento (dd-mm-aaaa): ");
+    const dataNascimento = prompt("Data de Nascimento (dd-mm-aaaa): ");
 
-//     const dataSeparado = dataNascimento.split("-");
+    const dataSeparado = dataNascimento.split("-");
 
-//     listaUsuario.push ({nome: nome, data_de_nascimento:dataSeparado, dia: dataSeparado[0], mes: dataSeparado[1], ano:dataSeparado[2]});
+    listaUsuario.push ({nome: nome, data_de_nascimento:dataSeparado, dia: dataSeparado[0], mes: dataSeparado[1], ano:dataSeparado[2]});
 
-//     console.clear();
+    console.clear();
 
-// };
+};
+
+//console.log(listaUsuario);
+let mesTotal = 0;
+
+const newList = listaUsuario.map(function(item, mesTotal){
+    if (item.mes == item.mes){
+         mesTotal = mesTotal + 1;
+    }
+})
+
+console.log(newList);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1703,7 +1726,7 @@ console.clear();
 
 
 
-//console.log(listaDatas);
+// console.log(listaDatas);
 
 
 
