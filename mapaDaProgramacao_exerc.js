@@ -1345,12 +1345,12 @@ console.clear();
 // console.log("\nTem algum item maior que R$50,00: ", checkValorUnitario);// método some trás um resultado boolean verifica se contem um item ou nao.
 
 
-// 12. Ainda utilizando o exercício de número 8, busque se há na lista algum elemento que seja “Arroz”, por meio da função `find`. 
+// 12. Ainda utilizando o exercício de número 9, busque se há na lista algum elemento que seja “Arroz”, por meio da função `find`. 
 // Imprima o resultado na tela.
 
 
 // const checkItem = listaDeCompras.find(function(item){
-//     return item.nome =="Arroz"
+//     return item.nome =="arroz"
 // })
 
 
@@ -1644,53 +1644,251 @@ console.clear();
 
 
 
-const listaUsuario = [];
+// const listaData = [];
 
 
-function letreiro(){
-    console.log("----- CADASTRO DE USUÁRIOS ----- ");
-};
+// function letreiro(){
+//     console.log("----- CADASTRO DE USUÁRIOS ----- ");
+// };
 
-letreiro();
+
+
+// letreiro();
+
+// const quantidade = parseInt(prompt("Informe a quantidade de usuários para cadastro: "));
+
+// console.clear();
+
+
+
+// letreiro();
+
+// for(let i=0; i < quantidade; i++){
+  
+
+//     console.log(`\nUsuário Nº${i+1}\n`);
+
+//     const ano = Number(prompt("Informe o Ano: "));
+//     const mes = Number(prompt("Informe o Mês: "));
+//     const dia = Number(prompt("Informe o dia: "));
+
+//     listaData.push ({data: new Date(ano,mes,dia)});
+
+//     console.clear();
+
+// };
+
+// //let contador = 0;
+
+
+// console.log(listaData);
+
+
+// //  console.log(listaData);
+ 
+//  listaData.sort(function(a,b){return a.data-b.data});
+
+
+
+
+
+//   console.log(listaData);
+
+
+
+
+
+
+
+
+
+
+
+
+const number = [];
+
+let contador = 0;
+
+
+console.log(contador);
 
 const quantidade = parseInt(prompt("Informe a quantidade de usuários para cadastro: "));
 
-console.clear();
-
-
-
-letreiro();
-
 for(let i=0; i < quantidade; i++){
 
-    console.log(`\nUsuário Nº${i+1}\n`);
+    const numero = Number(prompt("Informe um numero: "));
 
-    const nome = prompt("Nome: ");
-
-    const dataNascimento = prompt("Data de Nascimento (dd-mm-aaaa): ");
-
-    const dataSeparado = dataNascimento.split("-");
-
-    listaUsuario.push ({nome: nome, data_de_nascimento:dataSeparado, dia: dataSeparado[0], mes: dataSeparado[1], ano:dataSeparado[2]});
-
-    console.clear();
-
-};
-
-//console.log(listaUsuario);
-let mesTotal = 0;
-
-const newList = listaUsuario.map(function(item, mesTotal){
-    if (item.mes == item.mes){
-         mesTotal = mesTotal + 1;
-    }
-})
-
-console.log(newList);
+    number.push ({numero: numero});
 
 
+}
+
+number.sort(function(a,b) { return a.numero - b.numero});
+
+console.log(number);
+//contador += 1;
+
+console.log(contador)
+
+for(let i; i < number.length; i++){
+    console.log(i);
+    contador ++;
+    
+    // if(i.numero[a] > i.numero[b]){
+    //   return contador += 1;
+    // }else{
+    //     return contador = contador;
+    // }
+}
+
+for(let i of number){
+    return contador += 1;
+}
 
 
+// console.log(number);
+console.log(contador);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//const listaUsuario = [];
+
+//let contador = 0;
+
+// function contadorNome (quardaNome, contador, nome){
+
+//     if(quardaNome == nome){
+//       return  contador += 1
+//     }else{
+//       return contador = contador;
+//     }
+
+// }
+
+//let guardaNome ='';
+
+//const quantidade = parseInt(prompt("Informe a quantidade de usuários para cadastro: "));
+
+
+//for(let i=0; i < quantidade; i++){
+
+
+   // const nome = prompt("Nome: ");
+
+    
+
+    // if(quantidade == 0){
+    //   guardaNome = nome;
+    //  return contador = contador + 1;
+    // }else{
+    //     if(nome == guardaNome ){
+    //     guardaNome = nome;
+    //     contador = contador + 1; 
+    //     }else if(nome != guardaNome){
+    //         guardaNome = nome;
+    //         contador = contador;
+    //     }
+    // }   
+    // //contador(quardaNome,nome);
+    
+  //  listaUsuario.push ({nome: nome});
+
+//};
+
+
+
+
+// const checkIndex = listaUsuario.findIndex(function(item){
+//     return item.nome ==="ander"
+// })
+
+
+
+
+
+// const checkValor = listaUsuario.find(function(item){ 
+//     if(item.nome == "ander"){
+//         return 1;
+//     }else{
+//         return 0;
+//     }
+// })
+
+
+
+
+// console.log(listaUsuario);
+
+
+// console.log(checkIndex);
+
+
+
+
+
+
+
+
+// let total = 0;
+
+// listaUsuario.forEach(function(i, total){
+//     if(i.nome == "ander"){
+//         total = total + 1
+//     }
+//     return console.log(total);
+// })
+
+// let total = 0;
+
+// function totals (total){
+//     let valorTotal = listaUsuario.reduce(function(total,item){
+//         if(item.nome == "ander"){
+//          return  total += 1;
+//         };   
+//     }, 0); 
+
+// }
+
+
+
+// console.log(valorTotal);
+
+
+
+
+
+
+//  const checkItem = listaUsuario.find(function(item){
+//      return item.nome =="ander"
+//  })
+
+
+//  console.log("\nMétodo busca item da lista: ", checkItem);
+
+
+
+
+// const checkItem = listaDeCompras.find(function(item){
+//     return item.nome =="Arroz"
+// })
+
+
+// console.log("\nMétodo busca item da lista: ", checkItem);
 
 
 
