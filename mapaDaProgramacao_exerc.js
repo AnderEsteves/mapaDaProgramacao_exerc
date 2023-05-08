@@ -74,15 +74,15 @@ console.clear();
 
 
 
-//2°Desenvolva um sistema que solicite ao usuário dois números. Em seguida, calcule a média dos dois números.
+//2°Desenvolva um sistema que solicite ao usuário dois números. Em seguida, calcule a méano dos dois números.
 
 
 // const num1 = parseInt(prompt("Informe o 1º número: "));
 // const num2 = parseInt(prompt("Informe o 2º número: "));
 
-// const media = (num1 + num2) / 2;
+// const meano = (num1 + num2) / 2;
 
-// console.log("\n A média é ",media);
+// console.log("\n A méano é ",meano);
 
 
 //3° Desenvolva um programa que leia um número. Em seguida, usando os operadores de incremento, imprima o número seguinte.
@@ -372,10 +372,10 @@ console.clear();
 
 
 
-// 1. Desenvolva um sistema que execute uma função para calcular a média de 3 números
+// 1. Desenvolva um sistema que execute uma função para calcular a méano de 3 números
 
 
-// function media(num1,num2,num3){
+// function meano(num1,num2,num3){
 //     return (num1 + num2 + num3) / 3
 // }
 
@@ -383,7 +383,7 @@ console.clear();
 // let segundoNum = parseInt(prompt("Informe o 2° número: "));
 // let terceiroNum = parseInt(prompt("Informe o 3° número: "));
 
-// let resultado = media(primeiroNum, segundoNum, terceiroNum);
+// let resultado = meano(primeiroNum, segundoNum, terceiroNum);
 
 // console.log(resultado);
 
@@ -476,7 +476,7 @@ console.clear();
 
 
 // 1. Construa uma solução em que o usuário insira os dados de um aluno (nome, matricula, nota1, nota2, nota3). Salve as informações em um 
-// objeto e crie um método dentro deste objeto que calcule a média das 3 notas. Em seguida, apresente a média final para o usuário.
+// objeto e crie um método dentro deste objeto que calcule a méano das 3 notas. Em seguida, apresente a méano final para o usuário.
 
 
 
@@ -488,12 +488,12 @@ console.clear();
 //     aluno.nota1 = parseInt(prompt("Nota 1: "));
 //     aluno.nota2 = parseInt(prompt("Nota 2: "));
 //     aluno.nota3 = parseInt(prompt("Nota 3: "));
-//     aluno.media = function(){
+//     aluno.meano = function(){
 //         return (aluno.nota1 + aluno.nota2 + aluno.nota3) /3 ;
 //     };
 
 
-// console.log("A média do aluno ", aluno.media());
+// console.log("A méano do aluno ", aluno.meano());
 
 
 
@@ -507,7 +507,7 @@ console.clear();
 
 // const receita = new Object();
 //     receita.nome = "Bolo de Cenoura";
-//     receita.ingredientes = "\n 1/2 xícara (chá) de óleo, 3 cenouras médias raladas, 4 ovos, 2 xícaras (chá) de açúcar, 2 e 1/2 xícaras (chá) de farinha de trigo, 1 colher (sopa) de fermento em pó";
+//     receita.ingredientes = "\n 1/2 xícara (chá) de óleo, 3 cenouras méanos raladas, 4 ovos, 2 xícaras (chá) de açúcar, 2 e 1/2 xícaras (chá) de farinha de trigo, 1 colher (sopa) de fermento em pó";
 //     receita.modoDePreparo = "\n Em um liquidificador, adicione a cenoura, os ovos e o óleo, depois misture.  Acrescente o açúcar e bata novamente por 5 minutos. Em uma tigela ou na batedeira, adicione a farinha de trigo e depois misture novamente.Acrescente o fermento e misture lentamente com uma colher. Asse em um forno preaquecido a 180° C por aproximadamente 40 minutos.";
 //     receita.mostrar = function(){
 //         switch (escolha){
@@ -1609,7 +1609,7 @@ console.clear();
 //-----------------------------------------------------
 
        
-// 1. Desenvolva um sistema que solicite o usuário o dia, mês e ano. Em seguida, apresente a data no formato de date string, UTC e ISO.
+// 1. Desenvolva um sistema que solicite o usuário o ano, mês e ano. Em seguida, apresente a data no formato de date string, UTC e ISO.
 
 
 
@@ -1639,294 +1639,118 @@ console.clear();
 
 
 // 2. Crie um sistema que solicite o usuário o cadastro de 5 participantes de um processo seletivo para uma bolsa escolar, contento nome e data 
-// de nascimento (ano-mes-dia). A partir disso, apresente quantos nasceram no mesmo ano e quantos nasceram no mesmo mês.
+// de nascimento (ano-mes-ano). A partir disso, apresente quantos nasceram no mesmo ano e quantos nasceram no mesmo mês.
 
 
+// "COD REALIZADO COM A AJUDA DO MEU AMIGO JONATHAS"
+
+const listaCadastro = [];
+
+for(let i=0 ;  i < 2; i++){
+  const nome = prompt("Informe o seu Nome: ")
+  const dataNascimento = prompt("Informe a data de nascimento no formato AAAA-MM-DD: ");
+
+  const dataNascimentoArray = dataNascimento.split("-");
+
+  const nascimento = new Date(dataNascimentoArray[0], dataNascimentoArray[1]-1, dataNascimentoArray[2]);
+
+  listaCadastro.push({Nome: nome, nascimento: nascimento});
+
+}
+
+console.clear
+
+console.log("--- TABELA DE CADASTRO ---")
+
+console.log(listaCadastro)
+
+console.log("--- REPETIÇÕES DE DATAS ---")
+
+console.log("\nAno\n");
+
+  for (let i = 0; i < listaCadastro.length; i++) {
+    const ano = listaCadastro[i].nascimento.getFullYear();
+    const respota_ano = qtdRepitiu(ano, "ano");
+    if (i < (listaCadastro.length - 1)) {
+      if (ano != listaCadastro[i + 1].nascimento.getFullYear()) {
+        console.log(`ano ${ano} tem: ${respota_ano}`);  
+       }
+    } else {
+       console.log(`ano ${ano} tem: ${respota_ano}`);
+    }
+  }
 
 
-// const listaData = [];
+  console.log("\nMês\n");
 
+  for (let i = 0; i < listaCadastro.length; i++){
+    const mes = listaCadastro[i].nascimento.getMonth() + 1;
 
-// function letreiro(){
-//     console.log("----- CADASTRO DE USUÁRIOS ----- ");
-// };
-
-
-
-// letreiro();
-
-// const quantidade = parseInt(prompt("Informe a quantidade de usuários para cadastro: "));
-
-// console.clear();
-
-
-
-// letreiro();
-
-// for(let i=0; i < quantidade; i++){
+    const respota_mes = qtdRepitiu(mes, "mes");
+    if (i < (listaCadastro.length - 1)) {
+      if (mes != listaCadastro[i + 1].nascimento.getMonth() + 1) {
+        console.log(`Mes ${mes} tem: ${respota_mes}`);
+      }
+    } else {
+      console.log(`Mes ${mes} tem: ${respota_mes}`);
+    }
+  }
   
-
-//     console.log(`\nUsuário Nº${i+1}\n`);
-
-//     const ano = Number(prompt("Informe o Ano: "));
-//     const mes = Number(prompt("Informe o Mês: "));
-//     const dia = Number(prompt("Informe o dia: "));
-
-//     listaData.push ({data: new Date(ano,mes,dia)});
-
-//     console.clear();
-
-// };
-
-// //let contador = 0;
-
-
-// console.log(listaData);
-
-
-// //  console.log(listaData);
- 
-//  listaData.sort(function(a,b){return a.data-b.data});
-
-
-
-
-
-//   console.log(listaData);
-
-
-
-
-
-
-
-
-
-
-
-
-const number = [];
-
-let contador = 0;
-
-
-console.log(contador);
-
-const quantidade = parseInt(prompt("Informe a quantidade de usuários para cadastro: "));
-
-for(let i=0; i < quantidade; i++){
-
-    const numero = Number(prompt("Informe um numero: "));
-
-    number.push ({numero: numero});
-
-
-}
-
-number.sort(function(a,b) { return a.numero - b.numero});
-
-console.log(number);
-//contador += 1;
-
-console.log(contador)
-
-for(let i; i < number.length; i++){
-    console.log(i);
-    contador ++;
-    
-    // if(i.numero[a] > i.numero[b]){
-    //   return contador += 1;
-    // }else{
-    //     return contador = contador;
-    // }
-}
-
-for(let i of number){
-    return contador += 1;
-}
-
-
-// console.log(number);
-console.log(contador);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//const listaUsuario = [];
-
-//let contador = 0;
-
-// function contadorNome (quardaNome, contador, nome){
-
-//     if(quardaNome == nome){
-//       return  contador += 1
-//     }else{
-//       return contador = contador;
-//     }
-
-// }
-
-//let guardaNome ='';
-
-//const quantidade = parseInt(prompt("Informe a quantidade de usuários para cadastro: "));
-
-
-//for(let i=0; i < quantidade; i++){
-
-
-   // const nome = prompt("Nome: ");
-
-    
-
-    // if(quantidade == 0){
-    //   guardaNome = nome;
-    //  return contador = contador + 1;
-    // }else{
-    //     if(nome == guardaNome ){
-    //     guardaNome = nome;
-    //     contador = contador + 1; 
-    //     }else if(nome != guardaNome){
-    //         guardaNome = nome;
-    //         contador = contador;
-    //     }
-    // }   
-    // //contador(quardaNome,nome);
-    
-  //  listaUsuario.push ({nome: nome});
-
-//};
-
-
-
-
-// const checkIndex = listaUsuario.findIndex(function(item){
-//     return item.nome ==="ander"
-// })
-
-
-
-
-
-// const checkValor = listaUsuario.find(function(item){ 
-//     if(item.nome == "ander"){
-//         return 1;
-//     }else{
-//         return 0;
-//     }
-// })
-
-
-
-
-// console.log(listaUsuario);
-
-
-// console.log(checkIndex);
-
-
-
-
-
-
-
-
-// let total = 0;
-
-// listaUsuario.forEach(function(i, total){
-//     if(i.nome == "ander"){
-//         total = total + 1
-//     }
-//     return console.log(total);
-// })
-
-// let total = 0;
-
-// function totals (total){
-//     let valorTotal = listaUsuario.reduce(function(total,item){
-//         if(item.nome == "ander"){
-//          return  total += 1;
-//         };   
-//     }, 0); 
-
-// }
-
-
-
-// console.log(valorTotal);
-
-
-
-
-
-
-//  const checkItem = listaUsuario.find(function(item){
-//      return item.nome =="ander"
-//  })
-
-
-//  console.log("\nMétodo busca item da lista: ", checkItem);
-
-
-
-
-// const checkItem = listaDeCompras.find(function(item){
-//     return item.nome =="Arroz"
-// })
-
-
-// console.log("\nMétodo busca item da lista: ", checkItem);
-
-
-
-
-
-
-
-
-
-
-
-// const listaDatas = [];
-
-// let total = [];
-
-// for(let i=0; i < 2; i++){
-// const dataNascimento = prompt("Data de Nascimento (dd-mm-aaaa): ");
-
-// const dataSeparado = dataNascimento.split("-");
-
-// listaDatas.push ({mes: dataSeparado [1], ano: dataSeparado[2]});
-
-// };
-
-// for(let i of listaDatas){
-//     if(i.mes == i.mes){
-//        return total[i] += 1;
-//     }
-//     console.log(total);
-// }
-
-
-
-
-
-// console.log(listaDatas);
+  console.log("\ndia\n");
+
+  for (let i = 0; i < listaCadastro.length; i++) {
+      const dia = listaCadastro[i].nascimento.getDate() ;
+      const respota_dia = qtdRepitiu(dia, "dia");
+      if (i < (listaCadastro.length - 1)) {
+        if (dia != listaCadastro[i + 1].nascimento.getDate()) {
+           console.log(`dia ${dia} tem: ${respota_dia}`);
+         }
+      } else {
+         console.log(`dia ${dia} tem: ${respota_dia}`);
+      }
+  }
+
+
+
+
+
+  function qtdRepitiu(comparar, type) {
+    let aux = 0
+    for (const interno of listaCadastro) {
+      if( 
+        comparar === (type === "ano"
+        ? interno.nascimento.getFullYear()
+        : interno.nascimento.getMonth() + 1)
+        ) 
+      {
+        aux = aux + 1;
+      }
+      else if(
+        comparar === (type === "mes" 
+        ? interno.nascimento.getMonth() + 1 
+        : interno.nascimento.getFullYear())
+      ) 
+      {
+        aux = aux + 1;
+      }
+      else if(comparar === (type === "dia" 
+      ? interno.nascimento.getDate()  
+      : interno.nascimento.getFullYear())
+     )
+      {
+        aux = aux + 1;
+      }
+    }
+    return aux;
+  }
 
 
 
 // 3. Escreva um algoritmo que o usuário entre a hora que solicitou um taxi. Em seguida, apresente a mensagem: “Solicitação confirmada em: [apresente a data]”. 
 // Depois, solicite a previsão de minutos para chegada”. Finalizando, apresente a data final estimada para chegada ao destino.
+
+
+
+
+
+
