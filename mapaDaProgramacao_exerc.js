@@ -1843,17 +1843,21 @@ qtdeHamburger = Number(prompt("Informe quantos Hamburgueres deseja cadastrar? ")
 try {
 
     const formataExtrato = (hamburgueria) => {
-        return hamburgueria.map((item,preco) => ({
-            ...item,
-            valor: new Intl.NumberFormat("pt-BR",{ style:"currency", currency: "BRL",}).format(preco),
+        return hamburgueria.map((item) => ({
+        ...item,
+        preco: new Intl.NumberFormat("pt-BR",{ style:"currency", currency: "BRL",}).format(item.preco),
 
-         }))
+        tamanho: item.tamanho.toUpperCase(),
+
+        nome: item.nome.toUpperCase(),
+        
+         }));
     }
 
 
 
-    const validaDados = (preco, tamanho) =>{
-        if( preco <= 0){
+    const validaDados = (item) =>{
+        if( item.preco <= 0){
             throw "Valor precisa ser maior que 0";
         }
 
@@ -1862,22 +1866,26 @@ try {
         }else{
             throw "Tamanho precisa ser p, m, g";
         }
-    }
+     }
 
 
 
     for (i=0; i<qtdeHamburger; i++){
 
-        const nome = prompt("Informe o nome do hamburguer: ");
-    
-        const preco = Number(prompt("Informe o valor: "));
-    
-        const tamanho = prompt("Informe o tamnhao: (p - m - g)");
-    
-        hamburgueria.push ({ nome: nome, valor: preco, tamanho: tamanho });
+        const item = new Object();
 
-        validaDados(preco, tamanho);
+        item.nome = prompt("Informe o nome do hamburguer: ");
     
+        item.preco = Number(prompt("Informe o valor: "));
+    
+        item.tamanho = prompt("Informe o tamnhao: (p - m - g)");
+    
+
+        validaDados(item);
+
+        hamburgueria.push(item);
+
+        
     }
     
     console.clear();
