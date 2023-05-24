@@ -1644,113 +1644,292 @@ console.clear();
 
 // "COD REALIZADO COM A AJUDA DO MEU AMIGO JONATHAS"
 
-const listaCadastro = [];
+// const listaCadastro = [];
 
-for(let i=0 ;  i < 2; i++){
-  const nome = prompt("Informe o seu Nome: ")
-  const dataNascimento = prompt("Informe a data de nascimento no formato AAAA-MM-DD: ");
+// for(let i=0 ;  i < 2; i++){
+//   const nome = prompt("Informe o seu Nome: ")
+//   const dataNascimento = prompt("Informe a data de nascimento no formato AAAA-MM-DD: ");
 
-  const dataNascimentoArray = dataNascimento.split("-");
+//   const dataNascimentoArray = dataNascimento.split("-");
 
-  const nascimento = new Date(dataNascimentoArray[0], dataNascimentoArray[1]-1, dataNascimentoArray[2]);
+//   const nascimento = new Date(dataNascimentoArray[0], dataNascimentoArray[1]-1, dataNascimentoArray[2]);
 
-  listaCadastro.push({Nome: nome, nascimento: nascimento});
+//   listaCadastro.push({Nome: nome, nascimento: nascimento});
 
-}
+// }
 
-console.clear
+// console.clear
 
-console.log("--- TABELA DE CADASTRO ---")
+// console.log("--- TABELA DE CADASTRO ---")
 
-console.log(listaCadastro)
+// console.log(listaCadastro)
 
-console.log("--- REPETIÇÕES DE DATAS ---")
+// console.log("--- REPETIÇÕES DE DATAS ---")
 
-console.log("\nAno\n");
+// console.log("\nAno\n");
 
-  for (let i = 0; i < listaCadastro.length; i++) {
-    const ano = listaCadastro[i].nascimento.getFullYear();
-    const respota_ano = qtdRepitiu(ano, "ano");
-    if (i < (listaCadastro.length - 1)) {
-      if (ano != listaCadastro[i + 1].nascimento.getFullYear()) {
-        console.log(`ano ${ano} tem: ${respota_ano}`);  
-       }
-    } else {
-       console.log(`ano ${ano} tem: ${respota_ano}`);
-    }
-  }
+//   for (let i = 0; i < listaCadastro.length; i++) {
+//     const ano = listaCadastro[i].nascimento.getFullYear();
+//     const respota_ano = qtdRepitiu(ano, "ano");
+//     if (i < (listaCadastro.length - 1)) {
+//       if (ano != listaCadastro[i + 1].nascimento.getFullYear()) {
+//         console.log(`ano ${ano} tem: ${respota_ano}`);  
+//        }
+//     } else {
+//        console.log(`ano ${ano} tem: ${respota_ano}`);
+//     }
+//   }
 
 
-  console.log("\nMês\n");
+//   console.log("\nMês\n");
 
-  for (let i = 0; i < listaCadastro.length; i++){
-    const mes = listaCadastro[i].nascimento.getMonth() + 1;
+//   for (let i = 0; i < listaCadastro.length; i++){
+//     const mes = listaCadastro[i].nascimento.getMonth() + 1;
 
-    const respota_mes = qtdRepitiu(mes, "mes");
-    if (i < (listaCadastro.length - 1)) {
-      if (mes != listaCadastro[i + 1].nascimento.getMonth() + 1) {
-        console.log(`Mes ${mes} tem: ${respota_mes}`);
-      }
-    } else {
-      console.log(`Mes ${mes} tem: ${respota_mes}`);
-    }
-  }
+//     const respota_mes = qtdRepitiu(mes, "mes");
+//     if (i < (listaCadastro.length - 1)) {
+//       if (mes != listaCadastro[i + 1].nascimento.getMonth() + 1) {
+//         console.log(`Mes ${mes} tem: ${respota_mes}`);
+//       }
+//     } else {
+//       console.log(`Mes ${mes} tem: ${respota_mes}`);
+//     }
+//   }
   
-  console.log("\ndia\n");
+//   console.log("\ndia\n");
 
-  for (let i = 0; i < listaCadastro.length; i++) {
-      const dia = listaCadastro[i].nascimento.getDate() ;
-      const respota_dia = qtdRepitiu(dia, "dia");
-      if (i < (listaCadastro.length - 1)) {
-        if (dia != listaCadastro[i + 1].nascimento.getDate()) {
-           console.log(`dia ${dia} tem: ${respota_dia}`);
-         }
-      } else {
-         console.log(`dia ${dia} tem: ${respota_dia}`);
-      }
-  }
-
-
+//   for (let i = 0; i < listaCadastro.length; i++) {
+//       const dia = listaCadastro[i].nascimento.getDate() ;
+//       const respota_dia = qtdRepitiu(dia, "dia");
+//       if (i < (listaCadastro.length - 1)) {
+//         if (dia != listaCadastro[i + 1].nascimento.getDate()) {
+//            console.log(`dia ${dia} tem: ${respota_dia}`);
+//          }
+//       } else {
+//          console.log(`dia ${dia} tem: ${respota_dia}`);
+//       }
+//   }
 
 
 
-  function qtdRepitiu(comparar, type) {
-    let aux = 0
-    for (const interno of listaCadastro) {
-      if( 
-        comparar === (type === "ano"
-        ? interno.nascimento.getFullYear()
-        : interno.nascimento.getMonth() + 1)
-        ) 
-      {
-        aux = aux + 1;
-      }
-      else if(
-        comparar === (type === "mes" 
-        ? interno.nascimento.getMonth() + 1 
-        : interno.nascimento.getFullYear())
-      ) 
-      {
-        aux = aux + 1;
-      }
-      else if(comparar === (type === "dia" 
-      ? interno.nascimento.getDate()  
-      : interno.nascimento.getFullYear())
-     )
-      {
-        aux = aux + 1;
-      }
-    }
-    return aux;
-  }
+
+
+//   function qtdRepitiu(comparar, type) {
+//     let aux = 0
+//     for (const interno of listaCadastro) {
+//       if( 
+//         comparar === (type === "ano"
+//         ? interno.nascimento.getFullYear()
+//         : interno.nascimento.getMonth() + 1)
+//         ) 
+//       {
+//         aux = aux + 1;
+//       }
+//       else if(
+//         comparar === (type === "mes" 
+//         ? interno.nascimento.getMonth() + 1 
+//         : interno.nascimento.getFullYear())
+//       ) 
+//       {
+//         aux = aux + 1;
+//       }
+//       else if(comparar === (type === "dia" 
+//       ? interno.nascimento.getDate()  
+//       : interno.nascimento.getFullYear())
+//      )
+//       {
+//         aux = aux + 1;
+//       }
+//     }
+//     return aux;
+//   }
 
 
 
-// 3. Escreva um algoritmo que o usuário entre a hora que solicitou um taxi. Em seguida, apresente a mensagem: “Solicitação confirmada em: [apresente a data]”. 
+// 3. Escreva um algoritmo que o usuário entre a hora que solicitou um taxi. Em seguida, apresente a mensagem: “Solicitação confirmada em: [apresente a data e hora]”. 
 // Depois, solicite a previsão de minutos para chegada”. Finalizando, apresente a data final estimada para chegada ao destino.
 
 
 
 
+// const solicitarTaxi = prompt("Deseja solicitar um taxi (s/n)");
+
+// console.clear();
+
+// if (solicitarTaxi == "s"){
+
+//     console.log("----- AGENDAR TAXI -----");
+
+//     const horaSolicitada = prompt("Informe a hora que deseja agendar o seu Taxi (HH:mm): ");
+
+//     const horaSolicitadaArray = horaSolicitada.split(":");
+
+//     const hora = Number(horaSolicitadaArray[0]);
+
+//     const minutos = Number(horaSolicitadaArray[1]);
 
 
+//     const data =  new Date();
+
+//     data.setHours(hora);
+
+//     data.setMinutes(minutos);
+
+//     console.clear();
+
+//     console.log(`\nSolicitação confirmada em ${data.toLocaleString()}`);
+
+
+//     console.log("----- ESCOLHA DE PERCURSO -----");
+
+//     console.log("s -  sem pressa (aproximadamente 70 minutos)");
+//     console.log("n -  normal (aproximadamente  30 minutos)");
+//     console.log("r -  rápido (aproximadamente  15 minutos)");
+
+//     const velocidade = prompt("Escolha desejada: ");
+
+//     let minutosTotais = minutos;
+
+//     switch(velocidade){
+//         case "s":
+//              minutosTotais = minutos + 70;
+//         break;
+//           case "n":
+//              minutosTotais = minutos + 30;
+//         break;
+//           case "r":
+//             minutosTotais = minutos + 15;
+//         break;
+//     }
+
+//     console.log("\n----- AGENDADO -----\n");
+
+//   if (minutosTotais < 60){
+//     data.setMinutes(minutosTotais);
+//     console.log("Tempo esitmado de chegada: ", data.toLocaleString());
+//     }else{
+//       const tempoExcedente = minutosTotais - 60;
+//       data.setHours(hora + 1);
+//       data.setMinutes(tempoExcedente);
+//       console.log("Tempo esitmado de chegada: ",data.toLocaleString());
+//     };
+
+//   }else{
+//     console.log("Bye");
+//   }
+   
+
+//-----------------------------------------------------
+// Aula 14: Arrow function e Try Catch:
+//-----------------------------------------------------
+
+
+// 1. Desenvolva um sistema que cadastre 3 opções de menu te uma hamburgueria. O usuário deverá inserir os seguintes dados:
+//     1. Nome do lanche
+//     2. Valor
+//     3. Tamanho: p, m, g 
+
+// Valide os dados de entrada utilizando uma arrow function, e caso ocorra um erro, utilize a função throw. Em seguida, utilizando o console.table, apresente 
+// as informações na tela.
+
+
+let qtdeHamburger = 0;
+
+const hamburgueria = [];
+
+qtdeHamburger = Number(prompt("Informe quantos Hamburgueres deseja cadastrar? "));
+
+
+try {
+
+    const formataExtrato = (hamburgueria) => {
+        return hamburgueria.map((item,preco) => ({
+            ...item,
+            valor: new Intl.NumberFormat("pt-BR",{ style:"currency", currency: "BRL",}).format(preco),
+
+         }))
+    }
+
+
+
+    const validaDados = (preco, tamanho) =>{
+        if( preco <= 0){
+            throw "Valor precisa ser maior que 0";
+        }
+
+        if (tamanho === "p" ||tamanho === "m" || tamanho === "g" ){
+            return true;
+        }else{
+            throw "Tamanho precisa ser p, m, g";
+        }
+    }
+
+
+
+    for (i=0; i<qtdeHamburger; i++){
+
+        const nome = prompt("Informe o nome do hamburguer: ");
+    
+        const preco = Number(prompt("Informe o valor: "));
+    
+        const tamanho = prompt("Informe o tamnhao: (p - m - g)");
+    
+        hamburgueria.push ({ nome: nome, valor: preco, tamanho: tamanho });
+
+        validaDados(preco, tamanho);
+    
+    }
+    
+    console.clear();
+    
+    console.table(hamburgueria);
+
+    const extrato = formataExtrato(hamburgueria);
+
+    console.table(extrato);
+
+} catch (error) {
+    console.log(error);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 2. Crie um sistema onde o usuário irá cadastrar os últimos 7 pedidos realizados em uma pizzaria. As informações inseridas deverão ser:
+//     1. Sabor da pizza: margerita, pepperoni, frango, portuguesa.
+//     2. Tamanho: 1, 2 ou 3
+//     3. Data do pedido: yyyy-mm-dd
+//     4. Hora do pedido: hh-mm
+//     5. Valor total
+
+// Valide os dados à cada entrada. Em seguida, formate os dados de cada item com data completa e o valor total seguindo os padrões do javascript. Por fim,
+//  calcule o valor total de todos os pedidos e apresente os dados formatados e o valor total na tela para o usuário.
+
+
+
+// 3. Desenvolva um sistema que irá cadastrar as 5 corridas inicias de um motorista de aplicativo. Os dados inseridos devem ser:
+//     1. Horário de início da corrida
+//     2. Distância em km
+//     3. Tempo até o destino
+//     4. Valor da corrida
+
+// Em seguida, formate os dados, adicionado a propriedade de horário final de chegada ao destino e também o valor da corrida. Por fim, apresente os dados 
+// formatados, o valor total das soma das corridas e também a soma de distância percorrida.
