@@ -1746,7 +1746,8 @@ console.clear();
 
 
 
-// 3. Escreva um algoritmo que o usuário entre a hora que solicitou um taxi. Em seguida, apresente a mensagem: “Solicitação confirmada em: [apresente a data e hora]”. 
+// 3. Escreva um algoritmo que o usuário entre a hora que solicitou um taxi. Em seguida, apresente a mensagem: “Solicitação confirmada em: 
+// [apresente a data e hora]”. 
 // Depois, solicite a previsão de minutos para chegada”. Finalizando, apresente a data final estimada para chegada ao destino.
 
 
@@ -1833,70 +1834,186 @@ console.clear();
 // as informações na tela.
 
 
-let qtdeHamburger = 0;
-
-const hamburgueria = [];
-
-qtdeHamburger = Number(prompt("Informe quantos Hamburgueres deseja cadastrar? "));
 
 
-try {
+// let qtdeHamburger = 0;
 
-    const formataExtrato = (hamburgueria) => {
-        return hamburgueria.map((item) => ({
-        ...item,
-        preco: new Intl.NumberFormat("pt-BR",{ style:"currency", currency: "BRL",}).format(item.preco),
+// const hamburgueria = [];
 
-        tamanho: item.tamanho.toUpperCase(),
+// qtdeHamburger = Number(prompt("Informe quantos Hamburgueres deseja cadastrar? "));
 
-        nome: item.nome.toUpperCase(),
+
+// try {
+
+//     const formataExtrato = (hamburgueria) => {
+//         return hamburgueria.map((item) => ({
+//         ...item,
+//         preco: new Intl.NumberFormat("pt-BR",{ style:"currency", currency: "BRL",}).format(item.preco),
+
+//         tamanho: item.tamanho.toUpperCase(),
+
+//         nome: item.nome.toUpperCase(),
+    
         
-         }));
-    }
+//          }));
+//     }
 
 
 
-    const validaDados = (item) =>{
-        if( item.preco <= 0){
-            throw "Valor precisa ser maior que 0";
+//     const validaDados = (item) =>{
+//         if( item.preco <= 0){
+//             throw "Valor precisa ser maior que 0";
+//         }
+
+//         if (tamanho === "p" ||tamanho === "m" || tamanho === "g" ){
+//             return true;
+//         }else{
+//             throw "Tamanho precisa ser p, m, g";
+//         }
+//      }
+
+
+
+//     for (i=0; i<qtdeHamburger; i++){
+
+//         const item = new Object();
+
+//         item.nome = prompt("Informe o nome do hamburguer: ");
+    
+//         item.preco = Number(prompt("Informe o valor: "));
+    
+//         item.tamanho = prompt("Informe o tamnhao: (p - m - g)");
+    
+
+//         validaDados(item);
+
+//         hamburgueria.push(item);
+
+        
+//     }
+    
+//     console.clear();
+    
+//     console.table(hamburgueria);
+
+//     const extrato = formataExtrato(hamburgueria);
+
+//     console.table(extrato);
+
+// } catch (error) {
+//     console.log(error);
+
+// }
+
+
+
+
+
+
+// 2. Crie um sistema onde o usuário irá cadastrar os últimos 2 pedidos realizados em uma pizzaria. As informações inseridas deverão ser:
+//     1. Sabor da pizza: margerita, pepperoni, frango, portuguesa.
+//     2. Tamanho: 1, 2 ou 3
+//     3. Data do pedido: yyyy-mm-dd
+//     4. Hora do pedido: hh-mm
+//     5. Valor total
+
+// Valide os dados à cada entrada. Em seguida, formate os dados de cada item com data completa e o valor total seguindo os padrões do javascript. Por fim,
+//  calcule o valor total de todos os pedidos e apresente os dados formatados e o valor total na tela para o usuário.
+
+
+
+
+let contadorPedido  = 0;
+
+contadorPedido = Number(prompt("Informe a quantidade de pedidos: "));
+
+
+try{
+
+
+    const validaDados = (itemlistaDePedido) =>{
+
+        if(itemlistaDePedido.sabor === "a" || itemlistaDePedido.sabor === "b"){
+        } else{
+            throw "Sabor incorreto"
         }
-
-        if (tamanho === "p" ||tamanho === "m" || tamanho === "g" ){
-            return true;
-        }else{
-            throw "Tamanho precisa ser p, m, g";
+        
+        
+        if(itemlistaDePedido.tamanho === 1 || 
+           itemlistaDePedido.tamanho === 2 || 
+             itemlistaDePedido.tamanho === 3){
+        } else{
+            throw "Tamanho incorreto";
         }
-     }
+        
+
+      
+
+    }    
 
 
+    const listaDePedido = new Array();    
 
-    for (i=0; i<qtdeHamburger; i++){
+    for(i=0; i<contadorPedido; i++){
 
+        console.clear();
+       
         const item = new Object();
+       
+       
+        item.sabor = prompt("SABOR PIZZAS: Marguerida - Peperoni - Frango - Portuguesa | Informe o sabor: ");
 
-        item.nome = prompt("Informe o nome do hamburguer: ");
-    
-        item.preco = Number(prompt("Informe o valor: "));
-    
-        item.tamanho = prompt("Informe o tamnhao: (p - m - g)");
-    
+       
+        console.log("\n");
+       
+        item.tamanho = Number(prompt("TAMAHO: 1 - 2 - 3 - | Informe o tamanho: "));
 
+
+        if (item.tamanho === 1){
+            item.valor = 12 //new Intl.NumberFormat("pt-BR",{ style:"currency", currency: "BRL",}).format(12);
+        }
+
+        else if (item.tamanho === 2){
+            item.valor =  24
+        }
+
+        else if (item.tamanho === 3){
+            item.valor = 36 
+        }
+
+
+        console.log("\n");
+       
+        // item.data = prompt("DATA DO PEDIDO (AAAA/MM/DD):", new Date());
+        //     item.data = item.data.split("/");
+        //     item.data = item.data[2] + "/" + item.data[1] + "/" + item.data[0];
+
+
+        item.data =  new Date();
+         item.data = item.data.split("-");
+         item.data = item.data[2] + "-" + item.data[1] + "-" + item.data[0];
+           
+        console.log("\n");
+       
+        item.hora = prompt("HORA DO PEDIDO (HH:MM): ");
+            item.hora = item.hora.split(":");
+            item.hora = item.hora[0] + ":" + item.hora[1];
+           
+        console.log("\n");
+
+        listaDePedido.push(item);
+       
         validaDados(item);
-
-        hamburgueria.push(item);
-
-        
+  
     }
+
     
-    console.clear();
-    
-    console.table(hamburgueria);
+       
+    console.table(listaDePedido);
 
-    const extrato = formataExtrato(hamburgueria);
 
-    console.table(extrato);
 
-} catch (error) {
+} catch(error){
     console.log(error);
 }
 
@@ -1906,6 +2023,41 @@ try {
 
 
 
+//     const horaSolicitada = prompt("Informe a hora que deseja agendar o seu Taxi (HH:mm): ");
+
+//     const horaSolicitadaArray = horaSolicitada.split(":");
+
+//     const hora = Number(horaSolicitadaArray[0]);
+
+//     const minutos = Number(horaSolicitadaArray[1]);
+
+
+
+
+
+//     const data =  new Date();
+
+//     data.setHours(hora);
+
+//     data.setMinutes(minutos);
+
+
+
+
+
+
+// const a = 2;
+// const b = 3;
+// const c = 4;
+
+
+// const dedução = Number(prompt("Informe um número: "));
+
+// if((dedução == 2) || (dedução == 3) || (dedução == 4)){
+//     console.log("Acertou");
+// }else{
+//     console.log("Número errado");
+// }
 
 
 
@@ -1915,21 +2067,6 @@ try {
 
 
 
-
-
-
-
-
-
-// 2. Crie um sistema onde o usuário irá cadastrar os últimos 7 pedidos realizados em uma pizzaria. As informações inseridas deverão ser:
-//     1. Sabor da pizza: margerita, pepperoni, frango, portuguesa.
-//     2. Tamanho: 1, 2 ou 3
-//     3. Data do pedido: yyyy-mm-dd
-//     4. Hora do pedido: hh-mm
-//     5. Valor total
-
-// Valide os dados à cada entrada. Em seguida, formate os dados de cada item com data completa e o valor total seguindo os padrões do javascript. Por fim,
-//  calcule o valor total de todos os pedidos e apresente os dados formatados e o valor total na tela para o usuário.
 
 
 
